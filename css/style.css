@@ -286,3 +286,153 @@ color:#6b7280;
 ```
 
 }
+/* CAD PORTFOLIO GALLERY */
+
+.service-link {
+    display: block;
+    color: inherit;
+    text-decoration: none;
+}
+
+.cad-portfolio-section {
+    background: #f8fafc;
+}
+
+.portfolio-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 28px;
+}
+
+.portfolio-card {
+    background: #ffffff;
+    border-radius: 28px;
+    overflow: hidden;
+    box-shadow: 0 18px 45px rgba(0,0,0,0.08);
+    transition: 0.3s ease;
+}
+
+.portfolio-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 28px 70px rgba(0,0,0,0.14);
+}
+
+.portfolio-card img {
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+}
+
+.portfolio-card h3 {
+    padding: 24px 24px 8px;
+    font-size: 22px;
+}
+
+.portfolio-card p {
+    padding: 0 24px 20px;
+    color: #6b7280;
+}
+
+.portfolio-card .btn-secondary {
+    margin: 0 24px 26px;
+}
+/* ORGANIZED CAD PORTFOLIO */
+
+.portfolio-box-wrapper {
+display: grid;
+gap: 40px;
+}
+
+.portfolio-box {
+background: #ffffff;
+padding: 40px;
+border-radius: 32px;
+box-shadow: 0 20px 60px rgba(0,0,0,0.08);
+}
+
+.portfolio-box h3 {
+font-size: 34px;
+margin-bottom: 10px;
+}
+
+.portfolio-box-text {
+color: #6b7280;
+margin-bottom: 30px;
+}
+
+.portfolio-gallery {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+gap: 22px;
+}
+
+.portfolio-card {
+background: #f8fafc;
+border-radius: 24px;
+overflow: hidden;
+text-decoration: none;
+color: #111827;
+box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+transition: 0.3s ease;
+}
+
+.portfolio-card:hover {
+transform: translateY(-8px);
+box-shadow: 0 24px 60px rgba(0,0,0,0.14);
+}
+
+.portfolio-card img {
+width: 100%;
+height: 190px;
+object-fit: cover;
+}
+
+.portfolio-card h4 {
+padding: 18px 18px 6px;
+font-size: 18px;
+}
+
+.portfolio-card span {
+display: inline-block;
+margin: 0 18px 20px;
+color: #2563eb;
+font-weight: 700;
+}
+
+.pdf-grid {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+gap: 22px;
+}
+
+.pdf-card {
+display: block;
+padding: 28px;
+border-radius: 24px;
+background: #f8fafc;
+text-decoration: none;
+color: #111827;
+border: 1px solid #e5e7eb;
+transition: 0.3s ease;
+}
+
+.pdf-card:hover {
+transform: translateY(-6px);
+border-color: #2563eb;
+box-shadow: 0 20px 50px rgba(37,99,235,0.15);
+}
+
+.pdf-card h4 {
+font-size: 22px;
+margin-bottom: 10px;
+}
+
+.pdf-card p {
+color: #6b7280;
+margin-bottom: 16px;
+}
+
+.pdf-card span {
+color: #2563eb;
+font-weight: 700;
+}
