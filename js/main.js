@@ -1,59 +1,95 @@
-// Navbar glass effect on scroll
-const navbar = document.getElementById("navbar");
+const projects = [
+    {
+        title: "Solar Skid Design",
+        category: "Mechanical Design / CAD Drafting",
+        description: "A mechanical skid concept showing layout, rendering, and technical drawing presentation.",
+        images: [
+            {
+                title: "Skid Rendering",
+                file: "assets/images/portfolio/skid-rendering.jpg"
+            },
+            {
+                title: "Skid Drawing",
+                file: "assets/images/portfolio/skid-drawing.jpg"
+            }
+        ],
+        pdfs: [
+            {
+                title: "Solar Skid Rendering PDF",
+                file: "assets/files/Solar-Skid-Rendering.pdf"
+            }
+        ]
+    },
 
-window.addEventListener("scroll", () => {
-if (window.scrollY > 30) {
-navbar.classList.add("scrolled");
-} else {
-navbar.classList.remove("scrolled");
-}
-});
-
-// Scroll reveal animation
-const revealElements = document.querySelectorAll(".reveal");
-
-const revealOnScroll = () => {
-revealElements.forEach((element) => {
-const windowHeight = window.innerHeight;
-const elementTop = element.getBoundingClientRect().top;
-const revealPoint = 120;
-
-```
-    if (elementTop < windowHeight - revealPoint) {
-        element.classList.add("active");
+    {
+        title: "3D CAD Modeling Samples",
+        category: "3D Modeling / CAD",
+        description: "Sample 3D CAD modeling, capture, wireframe, and rendering outputs.",
+        images: [
+            {
+                title: "3D CAD Design",
+                file: "assets/images/portfolio/3d-cad.jpg"
+            },
+            {
+                title: "3D Capture",
+                file: "assets/images/portfolio/3d-capture.jpg"
+            },
+            {
+                title: "3D Modeling",
+                file: "assets/images/portfolio/3d-modeling.jpg"
+            },
+            {
+                title: "3D Wireframe",
+                file: "assets/images/portfolio/3d-wireframe.jpg"
+            },
+            {
+                title: "Engineering Rendering",
+                file: "assets/images/portfolio/rendering.jpg"
+            }
+        ],
+        pdfs: [
+            {
+                title: "Drawing Sample Portfolio",
+                file: "assets/files/Drawing-Sample-Portfolio.pdf"
+            }
+        ]
     }
-});
-```
+];
 
-};
+const portfolioContainer = document.getElementById("portfolioProjects");
 
-window.addEventListener("scroll", revealOnScroll);
-window.addEventListener("load", revealOnScroll);
+portfolioContainer.innerHTML = projects.map(project => `
+    <div class="project-showcase-card">
+        <div class="project-header">
+            <span>${project.category}</span>
+            <h3>${project.title}</h3>
+            <p>${project.description}</p>
+        </div>
 
-// Smooth closing behavior for mobile-style navigation
-const navLinks = document.querySelectorAll(".navbar nav a");
+        <div class="project-section-box">
+            <h4>Image Gallery</h4>
+            <div class="portfolio-gallery">
+                ${project.images.map(image => `
+                    <a href="${image.file}" target="_blank" class="portfolio-card">
+                        <img src="${image.file}" alt="${image.title}">
+                        <h5>${image.title}</h5>
+                        <span>View Image</span>
+                    </a>
+                `).join("")}
+            </div>
+        </div>
 
-navLinks.forEach((link) => {
-link.addEventListener("click", () => {
-revealOnScroll();
-});
-});
-
-// Small premium mouse movement effect on hero image
-const heroImage = document.querySelector(".hero-image img");
-
-if (heroImage) {
-document.addEventListener("mousemove", (event) => {
-const x = (window.innerWidth / 2 - event.clientX) / 80;
-const y = (window.innerHeight / 2 - event.clientY) / 80;
-
-```
-    heroImage.style.transform = `translate(${x}px, ${y}px) scale(1.01)`;
-});
-
-document.addEventListener("mouseleave", () => {
-    heroImage.style.transform = "translate(0, 0) scale(1)";
-});
-```
-
-}
+        <div class="project-section-box">
+            <h4>PDF Documents</h4>
+            <div class="pdf-grid">
+                ${project.pdfs.map(pdf => `
+                    <a href="${pdf.file}" target="_blank" class="pdf-card">
+                        <h5>${pdf.title}</h5>
+                        <p>Technical document / drawing package.</p>
+                        <span>View PDF</span>
+                    </a>
+                `).join("")}
+            </div>
+        </div>
+    </div>
+`).join("");
