@@ -457,3 +457,336 @@ footer {
         height: 170px;
     }
 }
+/* ================================
+   REQUEST FORM PAGE
+   Apple / Tesla Style Client Portal
+================================ */
+
+.request-page {
+    min-height: 100vh;
+    padding: 80px 8%;
+    background:
+        radial-gradient(circle at top left, rgba(37, 99, 235, 0.12), transparent 35%),
+        radial-gradient(circle at bottom right, rgba(17, 24, 39, 0.10), transparent 35%),
+        #f7f8fa;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.request-container {
+    width: 100%;
+    max-width: 920px;
+    background: rgba(255, 255, 255, 0.88);
+    backdrop-filter: blur(18px);
+    border-radius: 36px;
+    padding: 56px;
+    box-shadow: 0 30px 90px rgba(0, 0, 0, 0.12);
+    border: 1px solid rgba(255, 255, 255, 0.65);
+}
+
+.request-header {
+    text-align: center;
+    margin-bottom: 42px;
+}
+
+.request-header h1 {
+    font-size: 52px;
+    line-height: 1.05;
+    margin-bottom: 18px;
+    color: #111827;
+}
+
+.request-header p {
+    max-width: 760px;
+    margin: auto;
+    color: #6b7280;
+    font-size: 18px;
+}
+
+.request-form {
+    display: grid;
+    gap: 22px;
+}
+
+.form-group {
+    display: grid;
+    gap: 8px;
+}
+
+.form-group label {
+    font-weight: 700;
+    color: #111827;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 16px 18px;
+    border-radius: 18px;
+    border: 1px solid #d1d5db;
+    background: #ffffff;
+    font-size: 16px;
+    font-family: inherit;
+    color: #111827;
+    outline: none;
+    transition: 0.25s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: #2563eb;
+    box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.12);
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 160px;
+}
+
+.form-group input[type="file"] {
+    padding: 18px;
+    background: #f8fafc;
+    border: 2px dashed #cbd5e1;
+    cursor: pointer;
+}
+
+.form-group input[type="file"]:hover {
+    border-color: #2563eb;
+    background: #eff6ff;
+}
+
+.request-form .btn-primary {
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    width: fit-content;
+    margin-top: 10px;
+}
+
+.request-container .btn-secondary {
+    display: inline-block;
+    margin-top: 10px;
+}
+
+/* MOBILE REQUEST PAGE */
+
+@media(max-width: 768px) {
+    .request-page {
+        padding: 40px 5%;
+        align-items: flex-start;
+    }
+
+    .request-container {
+        padding: 32px 24px;
+        border-radius: 28px;
+    }
+
+    .request-header h1 {
+        font-size: 36px;
+    }
+
+    .request-header p {
+        font-size: 16px;
+    }
+
+    .request-form .btn-primary {
+        width: 100%;
+        text-align: center;
+    }
+
+    .request-container .btn-secondary {
+        width: 100%;
+        text-align: center;
+    }
+}
+/* ================================
+   REQUEST FORM PAGE - IMPROVED V2
+   Apple / Tesla Style Client Portal
+================================ */
+
+.request-page {
+    min-height: 100vh;
+    padding: 80px 8%;
+    background:
+        radial-gradient(circle at top left, rgba(37, 99, 235, 0.14), transparent 35%),
+        radial-gradient(circle at bottom right, rgba(17, 24, 39, 0.12), transparent 35%),
+        #f7f8fa;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.request-container {
+    width: 100%;
+    max-width: 1100px;
+    background: rgba(255, 255, 255, 0.92);
+    backdrop-filter: blur(20px);
+    border-radius: 38px;
+    padding: 60px;
+    box-shadow: 0 34px 100px rgba(0, 0, 0, 0.14);
+    border: 1px solid rgba(255, 255, 255, 0.75);
+}
+
+.request-header {
+    text-align: center;
+    margin-bottom: 42px;
+}
+
+.request-header h1 {
+    font-size: 54px;
+    line-height: 1.05;
+    margin-bottom: 18px;
+    color: #111827;
+    letter-spacing: -1.5px;
+}
+
+.request-header p {
+    max-width: 780px;
+    margin: auto;
+    color: #6b7280;
+    font-size: 18px;
+}
+
+/* TRUST BADGES */
+
+.request-trust {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 14px;
+    margin-top: 28px;
+}
+
+.request-trust span {
+    background: #f8fafc;
+    border: 1px solid #e5e7eb;
+    padding: 10px 16px;
+    border-radius: 999px;
+    font-size: 14px;
+    font-weight: 700;
+    color: #111827;
+}
+
+/* FORM */
+
+.request-form {
+    display: grid;
+    gap: 24px;
+}
+
+.form-group {
+    display: grid;
+    gap: 8px;
+}
+
+.form-group label {
+    font-weight: 700;
+    color: #111827;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 17px 20px;
+    border-radius: 18px;
+    border: 1px solid #d1d5db;
+    background: #ffffff;
+    font-size: 16px;
+    font-family: inherit;
+    color: #111827;
+    outline: none;
+    transition: 0.25s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: #2563eb;
+    box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.12);
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 170px;
+}
+
+/* FILE UPLOAD */
+
+.form-group input[type="file"] {
+    padding: 28px;
+    min-height: 95px;
+    background: #f8fafc;
+    border: 2px dashed #cbd5e1;
+    cursor: pointer;
+}
+
+.form-group input[type="file"]:hover {
+    border-color: #2563eb;
+    background: #eff6ff;
+}
+
+.form-note {
+    font-size: 13px;
+    color: #6b7280;
+    margin-top: -4px;
+}
+
+/* BUTTONS */
+
+.request-form .btn-primary {
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    width: fit-content;
+    margin-top: 10px;
+}
+
+.request-container .btn-secondary {
+    display: inline-block;
+    margin-top: 10px;
+}
+
+/* MOBILE REQUEST PAGE */
+
+@media(max-width: 768px) {
+    .request-page {
+        padding: 40px 5%;
+        align-items: flex-start;
+    }
+
+    .request-container {
+        padding: 34px 24px;
+        border-radius: 30px;
+    }
+
+    .request-header h1 {
+        font-size: 36px;
+        letter-spacing: -0.8px;
+    }
+
+    .request-header p {
+        font-size: 16px;
+    }
+
+    .request-trust {
+        justify-content: flex-start;
+    }
+
+    .request-trust span {
+        font-size: 13px;
+    }
+
+    .request-form .btn-primary {
+        width: 100%;
+        text-align: center;
+    }
+
+    .request-container .btn-secondary {
+        width: 100%;
+        text-align: center;
+    }
+}
