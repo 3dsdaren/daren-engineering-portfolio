@@ -417,9 +417,10 @@ footer {
     }
 
     .navbar nav {
-        flex-wrap: wrap;
-        justify-content: center;
-    }
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+}
 
     .contact-section {
         margin: 30px;
@@ -457,151 +458,7 @@ footer {
         height: 170px;
     }
 }
-/* ================================
-   REQUEST FORM PAGE
-   Apple / Tesla Style Client Portal
-================================ */
 
-.request-page {
-    min-height: 100vh;
-    padding: 80px 8%;
-    background:
-        radial-gradient(circle at top left, rgba(37, 99, 235, 0.12), transparent 35%),
-        radial-gradient(circle at bottom right, rgba(17, 24, 39, 0.10), transparent 35%),
-        #f7f8fa;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.request-container {
-    width: 100%;
-    max-width: 920px;
-    background: rgba(255, 255, 255, 0.88);
-    backdrop-filter: blur(18px);
-    border-radius: 36px;
-    padding: 56px;
-    box-shadow: 0 30px 90px rgba(0, 0, 0, 0.12);
-    border: 1px solid rgba(255, 255, 255, 0.65);
-}
-
-.request-header {
-    text-align: center;
-    margin-bottom: 42px;
-}
-
-.request-header h1 {
-    font-size: 52px;
-    line-height: 1.05;
-    margin-bottom: 18px;
-    color: #111827;
-}
-
-.request-header p {
-    max-width: 760px;
-    margin: auto;
-    color: #6b7280;
-    font-size: 18px;
-}
-
-.request-form {
-    display: grid;
-    gap: 22px;
-}
-
-.form-group {
-    display: grid;
-    gap: 8px;
-}
-
-.form-group label {
-    font-weight: 700;
-    color: #111827;
-}
-
-.form-group input,
-.form-group select,
-.form-group textarea {
-    width: 100%;
-    padding: 16px 18px;
-    border-radius: 18px;
-    border: 1px solid #d1d5db;
-    background: #ffffff;
-    font-size: 16px;
-    font-family: inherit;
-    color: #111827;
-    outline: none;
-    transition: 0.25s ease;
-}
-
-.form-group input:focus,
-.form-group select:focus,
-.form-group textarea:focus {
-    border-color: #2563eb;
-    box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.12);
-}
-
-.form-group textarea {
-    resize: vertical;
-    min-height: 160px;
-}
-
-.form-group input[type="file"] {
-    padding: 18px;
-    background: #f8fafc;
-    border: 2px dashed #cbd5e1;
-    cursor: pointer;
-}
-
-.form-group input[type="file"]:hover {
-    border-color: #2563eb;
-    background: #eff6ff;
-}
-
-.request-form .btn-primary {
-    border: none;
-    cursor: pointer;
-    font-size: 16px;
-    width: fit-content;
-    margin-top: 10px;
-}
-
-.request-container .btn-secondary {
-    display: inline-block;
-    margin-top: 10px;
-}
-
-/* MOBILE REQUEST PAGE */
-
-@media(max-width: 768px) {
-    .request-page {
-        padding: 40px 5%;
-        align-items: flex-start;
-    }
-
-    .request-container {
-        padding: 32px 24px;
-        border-radius: 28px;
-    }
-
-    .request-header h1 {
-        font-size: 36px;
-    }
-
-    .request-header p {
-        font-size: 16px;
-    }
-
-    .request-form .btn-primary {
-        width: 100%;
-        text-align: center;
-    }
-
-    .request-container .btn-secondary {
-        width: 100%;
-        text-align: center;
-    }
-}
 /* ================================
    REQUEST FORM PAGE - IMPROVED V2
    Apple / Tesla Style Client Portal
@@ -789,4 +646,512 @@ footer {
         width: 100%;
         text-align: center;
     }
+}
+/* ================================
+   HOW IT WORKS SECTION
+================================ */
+
+.how-it-works-section {
+    background: #ffffff;
+}
+
+.process-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 24px;
+
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.process-card {
+    background: #f8fafc;
+    padding: 32px;
+    border-radius: 28px;
+    border: 1px solid #e5e7eb;
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.05);
+    transition: 0.3s ease;
+}
+
+.process-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 24px 60px rgba(0, 0, 0, 0.10);
+}
+
+.process-card span {
+    display: inline-flex;
+    width: 46px;
+    height: 46px;
+    align-items: center;
+    justify-content: center;
+    background: #111827;
+    color: #ffffff;
+    border-radius: 50%;
+    font-weight: 800;
+    margin-bottom: 22px;
+}
+
+.process-card h3 {
+    font-size: 22px;
+    margin-bottom: 12px;
+    color: #111827;
+}
+
+.process-card p {
+    color: #6b7280;
+}
+
+.process-cta {
+    display: flex;
+    justify-content: center;
+    margin-top: 46px;
+}
+
+/* MOBILE PROCESS SECTION */
+
+@media(max-width: 768px) {
+    .process-card {
+        padding: 26px;
+    }
+
+    .process-cta .btn-primary {
+        width: 100%;
+        text-align: center;
+    }
+}
+/* ================================
+   WHY CHOOSE SECTION
+================================ */
+
+.why-choose-section {
+    background:
+        radial-gradient(circle at top right, rgba(37, 99, 235, 0.08), transparent 30%),
+        #f8fafc;
+}
+
+.why-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 26px;
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+.why-card {
+    background: #ffffff;
+    padding: 36px;
+    border-radius: 30px;
+    border: 1px solid #e5e7eb;
+    box-shadow: 0 16px 45px rgba(0, 0, 0, 0.06);
+    transition: 0.3s ease;
+}
+
+.why-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 26px 70px rgba(0, 0, 0, 0.12);
+}
+
+.why-card span {
+    display: inline-block;
+    color: #2563eb;
+    font-size: 13px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+    margin-bottom: 20px;
+}
+
+.why-card h3 {
+    font-size: 24px;
+    margin-bottom: 14px;
+    color: #111827;
+}
+
+.why-card p {
+    color: #6b7280;
+}
+
+/* MOBILE WHY CHOOSE SECTION */
+
+@media(max-width: 768px) {
+    .why-card {
+        padding: 28px;
+    }
+
+    .why-card h3 {
+        font-size: 22px;
+    }
+}
+/* ================================
+SOFTWARE & SKILLS SECTION
+================================ */
+
+.skills-section {
+background: #ffffff;
+}
+
+.skills-grid {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+gap: 24px;
+max-width: 1300px;
+margin: 0 auto;
+}
+
+.skill-card {
+background: #f8fafc;
+padding: 32px;
+border-radius: 28px;
+border: 1px solid #e5e7eb;
+transition: 0.3s ease;
+box-shadow: 0 12px 35px rgba(0,0,0,0.05);
+}
+
+.skill-card:hover {
+transform: translateY(-8px);
+box-shadow: 0 24px 60px rgba(0,0,0,0.10);
+}
+
+.skill-card h3 {
+font-size: 24px;
+margin-bottom: 12px;
+color: #111827;
+}
+
+.skill-card p {
+color: #6b7280;
+}
+
+@media(max-width:768px) {
+.skill-card {
+padding: 26px;
+}
+
+.skill-card h3 {
+    font-size: 22px;
+}
+}
+/* ================================
+   FEATURED PROJECT CASE STUDY
+================================ */
+
+.case-study-section {
+    background: #ffffff;
+}
+
+.case-study-card {
+    max-width: 1300px;
+    margin: 0 auto;
+    background: #ffffff;
+    border-radius: 34px;
+    padding: 50px;
+    border: 1px solid #e5e7eb;
+    box-shadow: 0 24px 70px rgba(0,0,0,0.08);
+}
+
+.case-study-header {
+    margin-bottom: 40px;
+}
+
+.case-study-image {
+    margin-bottom: 30px;
+}
+
+.case-study-image img {
+    width: 100%;
+    max-height: 500px;
+    object-fit: cover;
+    border-radius: 24px;
+    display: block;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.12);
+}
+
+.case-study-header span {
+    display: inline-block;
+    color: #2563eb;
+    font-size: 13px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    margin-bottom: 12px;
+}
+
+.case-study-header h3 {
+    font-size: 38px;
+    margin-bottom: 12px;
+    color: #111827;
+}
+
+.case-study-header p {
+    color: #6b7280;
+    max-width: 800px;
+}
+
+.case-study-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 24px;
+    margin-bottom: 34px;
+}
+
+.case-study-item {
+    background: #f8fafc;
+    padding: 30px;
+    border-radius: 24px;
+    border: 1px solid #e5e7eb;
+}
+
+.case-study-item h4 {
+    margin-bottom: 12px;
+    color: #111827;
+}
+
+.case-study-item p {
+    color: #6b7280;
+}
+
+.case-study-result {
+    background: #111827;
+    color: white;
+    padding: 36px;
+    border-radius: 24px;
+}
+
+.case-study-result h4 {
+    margin-bottom: 12px;
+}
+
+.case-study-result p {
+    color: #d1d5db;
+}
+
+.case-study-actions {
+    margin-top: 24px;
+}
+
+.case-study-actions .btn-primary {
+    display: inline-block;
+}
+
+@media(max-width:768px) {
+    .case-study-card {
+        padding: 28px;
+    }
+
+    .case-study-header h3 {
+        font-size: 30px;
+    }
+
+    .case-study-image img {
+        max-height: 320px;
+    }
+}
+/* ========================================
+PORTFOLIO V3 ENHANCEMENT PACK
+Paste at END of style.css
+======================================== */
+
+/* Smooth Scrolling */
+
+html {
+scroll-behavior: smooth;
+}
+
+/* Better Button Hover */
+
+.btn-primary,
+.btn-secondary {
+transition: all 0.3s ease;
+}
+
+.btn-primary:hover,
+.btn-secondary:hover {
+transform: translateY(-4px);
+}
+
+/* Navbar Enhancement */
+
+.navbar {
+transition: all 0.3s ease;
+}
+
+/* Section Reveal Feel */
+
+.section {
+position: relative;
+}
+
+/* Hero Enhancement */
+
+.hero-content h1 {
+letter-spacing: -2px;
+}
+
+.hero-image img:hover {
+transform: scale(1.02);
+transition: 0.4s ease;
+}
+
+/* Services */
+
+.card {
+transition: all 0.35s ease;
+}
+
+.card:hover {
+transform: translateY(-10px);
+}
+
+/* Skills */
+
+.skill-card {
+position: relative;
+overflow: hidden;
+}
+
+.skill-card::before {
+content: "";
+position: absolute;
+top: 0;
+left: -100%;
+width: 100%;
+height: 4px;
+background: #2563eb;
+transition: 0.4s;
+}
+
+.skill-card:hover::before {
+left: 0;
+}
+
+.skill-card:hover {
+transform: translateY(-10px);
+}
+
+/* Process Cards */
+
+.process-card {
+transition: all 0.35s ease;
+}
+
+.process-card:hover {
+transform: translateY(-10px);
+}
+
+/* Why Choose Cards */
+
+.why-card {
+transition: all 0.35s ease;
+}
+
+.why-card:hover {
+transform: translateY(-10px);
+}
+
+/* Featured Project Image */
+
+.case-study-image img {
+width: 100%;
+max-height: 550px;
+object-fit: cover;
+object-position: center;
+border-radius: 24px;
+display: block;
+box-shadow: 0 20px 60px rgba(0,0,0,0.12);
+transition: 0.4s ease;
+}
+
+.case-study-image img:hover {
+transform: scale(1.02);
+}
+
+/* Featured Project Card */
+
+.case-study-card {
+overflow: hidden;
+}
+
+.case-study-actions {
+margin-top: 25px;
+}
+
+.case-study-actions .btn-primary {
+display: inline-block;
+padding: 14px 28px;
+}
+
+/* Portfolio Gallery */
+
+.portfolio-card {
+transition: all 0.35s ease;
+}
+
+.portfolio-card:hover img {
+transform: scale(1.04);
+}
+
+.portfolio-card img {
+transition: 0.4s ease;
+}
+
+/* PDF Cards */
+
+.pdf-card {
+transition: all 0.35s ease;
+}
+
+.pdf-card:hover {
+transform: translateY(-8px);
+}
+
+/* Contact Section */
+
+.contact-section {
+box-shadow: 0 25px 70px rgba(0,0,0,0.18);
+}
+
+.contact-section .btn-primary {
+background: white;
+color: #111827;
+}
+
+.contact-section .btn-primary:hover {
+background: #2563eb;
+color: white;
+}
+
+/* Footer */
+
+footer {
+font-size: 14px;
+}
+
+/* Mobile Improvements */
+
+@media (max-width:768px) {
+
+.hero h1 {
+    font-size: 42px;
+    line-height: 1.1;
+}
+
+.section-title h2 {
+    font-size: 34px;
+}
+
+.case-study-header h3 {
+    font-size: 28px;
+}
+
+.case-study-image img {
+    max-height: 320px;
+}
+
+.hero-buttons {
+    flex-direction: column;
+    width: 100%;
+}
+
+.hero-buttons a {
+    text-align: center;
+}
+
 }
