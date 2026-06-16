@@ -28,63 +28,82 @@
                 <span>Free Initial Review</span>
             </div>
         </div>
+<form
+    action="https://formspree.io/f/mrevdpja"
+    method="POST"
+    class="request-form">
 
-        <form class="request-form">
+<div class="form-group">
+    <label>Full Name</label>
+    <input type="text" name="Full Name" placeholder="Enter your full name" required>
+</div>
 
-            <div class="form-group">
-                <label>Full Name</label>
-                <input type="text" placeholder="Enter your full name">
-            </div>
+<div class="form-group">
+    <label>Email Address</label>
+    <input type="email" name="Email Address" placeholder="Enter your email" required>
+</div>
 
-            <div class="form-group">
-                <label>Email Address</label>
-                <input type="email" placeholder="Enter your email">
-            </div>
+<div class="form-group">
+    <label>Company (Optional)</label>
+    <input type="text" name="Company" placeholder="Company name">
+</div>
 
-            <div class="form-group">
-                <label>Company (Optional)</label>
-                <input type="text" placeholder="Company name">
-            </div>
+<div class="form-group">
+    <label>Project Type</label>
+    <select name="Project Type">
+        <option>Mechanical Design</option>
+        <option>CAD Drafting</option>
+        <option>3D Modeling</option>
+        <option>Engineering Consulting</option>
+        <option>Fabrication Drawing</option>
+        <option>Reverse Engineering</option>
+        <option>Other</option>
+    </select>
+</div>
 
-            <div class="form-group">
-                <label>Project Type</label>
-                <select>
-                    <option>Mechanical Design</option>
-                    <option>CAD Drafting</option>
-                    <option>3D Modeling</option>
-                    <option>Engineering Consulting</option>
-                    <option>Fabrication Drawing</option>
-                    <option>Reverse Engineering</option>
-                    <option>Other</option>
-                </select>
-            </div>
+<div class="form-group">
+    <label>Project Description</label>
+    <textarea
+        name="Project Description"
+        rows="8"
+        placeholder="Describe your project requirements, dimensions, objectives, and expected deliverables."
+        required></textarea>
+</div>
 
-            <div class="form-group">
-                <label>Project Description</label>
-                <textarea rows="8" placeholder="Describe your project requirements, dimensions, objectives, and expected deliverables."></textarea>
-            </div>
+<div class="form-group">
+    <label>File Link / Drawing Reference</label>
 
-            <div class="form-group">
-                <label>Upload Sketch / Image / PDF</label>
-                <input type="file" accept=".jpg,.jpeg,.png,.pdf,.dwg,.step,.stp">
-                <p class="form-note">Accepted files: JPG, PNG, PDF, DWG, STEP, STP.</p>
-            </div>
+    <input
+        type="url"
+        name="File Link"
+        placeholder="Paste Google Drive, Dropbox, OneDrive, or PDF link here">
 
-            <div class="form-group">
-                <label>Target Completion Date</label>
-                <input type="date">
-            </div>
+    <p class="form-note">
+        Upload your sketch, image, PDF, DWG, or STEP file to Google Drive, Dropbox, or OneDrive, then paste the share link here.
+    </p>
+</div>
 
-            <div class="form-group">
-                <label>Estimated Budget (Optional)</label>
-                <input type="text" placeholder="Example: $500 or ₱20,000">
-            </div>
+<div class="form-group">
+    <label>Target Completion Date</label>
+    <input type="date" name="Target Completion Date">
+</div>
 
-            <button type="submit" class="btn-primary">
-                Submit Request
-            </button>
+<div class="form-group">
+    <label>Estimated Budget (Optional)</label>
+    <input
+        type="text"
+        name="Estimated Budget"
+        placeholder="Example: $500 or ₱20,000">
+</div>
 
-        </form>
+<button type="submit" class="btn-primary">
+    Submit Request
+</button>
+
+</form>
+
+
+
 
         <div style="margin-top:40px;">
             <a href="index.html" class="btn-secondary">
