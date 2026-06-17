@@ -584,6 +584,22 @@ body {
     margin-top: -4px;
 }
 
+.checkbox-group {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+}
+
+.checkbox-group input[type="checkbox"] {
+    width: auto;
+    margin-top: 4px;
+}
+
+.checkbox-group label {
+    font-weight: 500;
+    line-height: 1.5;
+}
+
 /* BUTTONS */
 
 .request-form .btn-primary {
