@@ -58,38 +58,53 @@ const projects = [
 
 const portfolioContainer = document.getElementById("portfolioProjects");
 
-portfolioContainer.innerHTML = projects.map(project => `
-    <div class="project-showcase-card">
-        <div class="project-header">
-            <span>${project.category}</span>
-            <h3>${project.title}</h3>
-            <p>${project.description}</p>
-        </div>
+if (portfolioContainer) {
 
-        <div class="project-section-box">
-            <h4>Image Gallery</h4>
-            <div class="portfolio-gallery">
-                ${project.images.map(image => `
-                    <a href="${image.file}" target="_blank" class="portfolio-card">
-                        <img src="${image.file}" alt="${image.title}">
-                        <h5>${image.title}</h5>
-                        <span>View Image</span>
-                    </a>
-                `).join("")}
+    portfolioContainer.innerHTML = projects.map(project => `
+        <div class="project-showcase-card">
+            <div class="project-header">
+                <span>${project.category}</span>
+                <h3>${project.title}</h3>
+                <p>${project.description}</p>
+            </div>
+
+            <div class="project-section-box">
+                <h4>Image Gallery</h4>
+                <div class="portfolio-gallery">
+                    ${project.images.map(image => `
+                        <a href="${image.file}"
+                           target="_blank"
+                           rel="noopener noreferrer"
+                           class="portfolio-card">
+                            <img src="${image.file}" alt="${image.title}">
+                            <h5>${image.title}</h5>
+                            <span>View Image</span>
+                        </a>
+                    `).join("")}
+                </div>
+            </div>
+
+            <div class="project-section-box">
+                <h4>PDF Documents</h4>
+                <div class="pdf-grid">
+                    ${project.pdfs.map(pdf => `
+                        <a href="${pdf.file}"
+                           target="_blank"
+                           rel="noopener noreferrer"
+                           class="pdf-card">
+                            <h5>${pdf.title}</h5>
+                            <p>Technical document / drawing package.</p>
+                            <span>View PDF</span>
+                        </a>
+                    `).join("")}
+                </div>
             </div>
         </div>
+    `).join("");
+}
 
-        <div class="project-section-box">
-            <h4>PDF Documents</h4>
-            <div class="pdf-grid">
-                ${project.pdfs.map(pdf => `
-                    <a href="${pdf.file}" target="_blank" class="pdf-card">
-                        <h5>${pdf.title}</h5>
-                        <p>Technical document / drawing package.</p>
-                        <span>View PDF</span>
-                    </a>
-                `).join("")}
-            </div>
-        </div>
-    </div>
-`).join("");
+/* Page Loaded Hook */
+
+window.addEventListener("load", () => {
+    document.body.classList.add("loaded");
+});

@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -12,106 +13,152 @@
 <section class="request-page">
     <div class="request-container">
 
-        <div class="request-header">
-            <h1>Start Your Engineering Project</h1>
+    <div class="request-header">
+        <h1>Start Your Engineering Project</h1>
 
-            <p>
-                Have a sketch, drawing, concept, PDF, or project idea?
-                Upload your files and provide a brief description of your requirements.
-                I will review the information and contact you regarding the next steps.
-            </p>
+        <p>
+            Have a sketch, drawing, concept, PDF, or project idea?
+            Share your project details and file link below.
+            I will review the information and contact you regarding the next steps.
+        </p>
 
-            <div class="request-trust">
-                <span>Sketches Accepted</span>
-                <span>PDFs Accepted</span>
-                <span>Confidential Review</span>
-                <span>Free Initial Review</span>
-            </div>
+        <div class="request-trust">
+            <span>Sketches Accepted</span>
+            <span>PDFs Accepted</span>
+            <span>Confidential Review</span>
+            <span>Free Initial Review</span>
         </div>
-<form
-    action="https://formspree.io/f/mrevdpja"
-    method="POST"
-    class="request-form">
-
-<div class="form-group">
-    <label>Full Name</label>
-    <input type="text" name="Full Name" placeholder="Enter your full name" required>
-</div>
-
-<div class="form-group">
-    <label>Email Address</label>
-    <input type="email" name="Email Address" placeholder="Enter your email" required>
-</div>
-
-<div class="form-group">
-    <label>Company (Optional)</label>
-    <input type="text" name="Company" placeholder="Company name">
-</div>
-
-<div class="form-group">
-    <label>Project Type</label>
-    <select name="Project Type">
-        <option>Mechanical Design</option>
-        <option>CAD Drafting</option>
-        <option>3D Modeling</option>
-        <option>Engineering Consulting</option>
-        <option>Fabrication Drawing</option>
-        <option>Reverse Engineering</option>
-        <option>Other</option>
-    </select>
-</div>
-
-<div class="form-group">
-    <label>Project Description</label>
-    <textarea
-        name="Project Description"
-        rows="8"
-        placeholder="Describe your project requirements, dimensions, objectives, and expected deliverables."
-        required></textarea>
-</div>
-
-<div class="form-group">
-    <label>File Link / Drawing Reference</label>
-
-    <input
-        type="url"
-        name="File Link"
-        placeholder="Paste Google Drive, Dropbox, OneDrive, or PDF link here">
-
-    <p class="form-note">
-        Upload your sketch, image, PDF, DWG, or STEP file to Google Drive, Dropbox, or OneDrive, then paste the share link here.
-    </p>
-</div>
-
-<div class="form-group">
-    <label>Target Completion Date</label>
-    <input type="date" name="Target Completion Date">
-</div>
-
-<div class="form-group">
-    <label>Estimated Budget (Optional)</label>
-    <input
-        type="text"
-        name="Estimated Budget"
-        placeholder="Example: $500 or ₱20,000">
-</div>
-
-<button type="submit" class="btn-primary">
-    Submit Request
-</button>
-
-</form>
-
-
-
-
-        <div style="margin-top:40px;">
-            <a href="index.html" class="btn-secondary">
-                ← Back to Portfolio
-            </a>
-        </div>
-
     </div>
+
+    <form
+        action="https://formspree.io/f/mrevdpja"
+        method="POST"
+        class="request-form">
+
+        <input
+            type="hidden"
+            name="_subject"
+            value="New Engineering Project Request">
+
+        <div class="form-group">
+            <label>Full Name</label>
+            <input type="text" name="Full Name" placeholder="Enter your full name" required>
+        </div>
+
+        <div class="form-group">
+            <label>Email Address</label>
+            <input type="email" name="Email Address" placeholder="Enter your email" required>
+        </div>
+
+        <div class="form-group">
+            <label>Phone Number (Optional)</label>
+            <input type="tel" name="Phone Number" placeholder="+63 9XX XXX XXXX">
+        </div>
+
+        <div class="form-group">
+            <label>Company (Optional)</label>
+            <input type="text" name="Company" placeholder="Company name">
+        </div>
+
+        <div class="form-group">
+            <label>Project Type</label>
+
+            <select name="Project Type" required>
+                <option value="">Select Project Type</option>
+                <option>Mechanical Design</option>
+                <option>CAD Drafting</option>
+                <option>3D CAD Modeling</option>
+                <option>Fabrication Drawing</option>
+                <option>Reverse Engineering</option>
+                <option>Engineering Review</option>
+                <option>Technical Documentation</option>
+                <option>Website / Digital Engineering</option>
+                <option>Other</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label>Project Description</label>
+
+            <textarea
+                name="Project Description"
+                rows="8"
+                placeholder="Describe your project requirements, dimensions, objectives, and expected deliverables."
+                required></textarea>
+        </div>
+
+        <div class="form-group">
+            <label>File Link / Drawing Reference</label>
+
+            <input
+                type="url"
+                name="File Link"
+                placeholder="Paste Google Drive, Dropbox, OneDrive, or PDF link here">
+
+            <p class="form-note">
+                Upload your sketch, image, PDF, DWG, STEP, or reference file to Google Drive,
+                Dropbox, or OneDrive, then paste the share link here.
+            </p>
+        </div>
+
+        <div class="form-group">
+            <label>Target Completion Date</label>
+            <input type="date" name="Target Completion Date">
+        </div>
+
+        <div class="form-group">
+            <label>Estimated Budget</label>
+
+            <select name="Estimated Budget">
+                <option value="">Select Budget Range</option>
+                <option>Under ₱5,000</option>
+                <option>₱5,000 - ₱10,000</option>
+                <option>₱10,000 - ₱25,000</option>
+                <option>₱25,000 - ₱50,000</option>
+                <option>₱50,000+</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label>Preferred Contact Method</label>
+
+            <select name="Preferred Contact Method">
+                <option>Email</option>
+                <option>Phone</option>
+                <option>Viber</option>
+                <option>WhatsApp</option>
+            </select>
+        </div>
+
+        <div class="form-note">
+            By submitting this request, you acknowledge that the information
+            provided will be used solely for project evaluation, quotation,
+            and communication purposes. All project information, drawings,
+            concepts, and shared files are treated as confidential and will
+            not be disclosed to third parties without permission.
+        </div>
+
+        <div class="form-group">
+            <label>
+                <input type="checkbox" required>
+                I confirm that the information provided is accurate and I agree to be contacted regarding this project.
+            </label>
+        </div>
+
+        <button type="submit" class="btn-primary">
+            Submit Request
+        </button>
+
+    </form>
+
+    <div style="margin-top:40px;">
+        <a href="index.html" class="btn-secondary">
+            ← Back to Portfolio
+        </a>
+    </div>
+
+</div>
+
 </section>
 
 </body>
