@@ -31,39 +31,54 @@
     </div>
 
     <form
-        action="https://formspree.io/f/mrevdpja"
-        method="POST"
-        class="request-form">
+    class="request-form"
+    action="https://formspree.io/f/mrevdpja"
+    method="POST">
 
-        <input
-            type="hidden"
-            name="_subject"
-            value="New Engineering Project Request">
+    <input
+        type="hidden"
+        name="_next"
+        value="https://3dsdaren.github.io/daren-engineering-portfolio/thankyou.html">
+
+    <input
+        type="hidden"
+        name="_subject"
+        value="New Engineering Project Request">
 
         <div class="form-group">
             <label>Full Name</label>
-            <input type="text" name="Full Name" placeholder="Enter your full name" required>
+            <input
+    type="text"
+    name="full_name"
+    placeholder="Enter your full name"
+    autocomplete="name"
+    required>
         </div>
 
         <div class="form-group">
             <label>Email Address</label>
-            <input type="email" name="Email Address" placeholder="Enter your email" required>
+           <input
+    type="email"
+    name="email_address"
+    placeholder="Enter your email"
+    autocomplete="email"
+    required>
         </div>
 
         <div class="form-group">
             <label>Phone Number (Optional)</label>
-            <input type="tel" name="Phone Number" placeholder="+63 9XX XXX XXXX">
+            <input type="tel" name="phone_number" placeholder="+63 9XX XXX XXXX">
         </div>
 
         <div class="form-group">
             <label>Company (Optional)</label>
-            <input type="text" name="Company" placeholder="Company name">
+            <input type="text" name="company" placeholder="Company name">
         </div>
 
         <div class="form-group">
             <label>Project Type</label>
 
-            <select name="Project Type" required>
+            <select name="project_type" required>
                 <option value="">Select Project Type</option>
                 <option>Mechanical Design</option>
                 <option>CAD Drafting</option>
@@ -81,7 +96,7 @@
             <label>Project Description</label>
 
             <textarea
-                name="Project Description"
+                name="project_description"
                 rows="8"
                 placeholder="Describe your project requirements, dimensions, objectives, and expected deliverables."
                 required></textarea>
@@ -92,7 +107,7 @@
 
             <input
                 type="url"
-                name="File Link"
+                name="file_link"
                 placeholder="Paste Google Drive, Dropbox, OneDrive, or PDF link here">
 
             <p class="form-note">
@@ -103,13 +118,13 @@
 
         <div class="form-group">
             <label>Target Completion Date</label>
-            <input type="date" name="Target Completion Date">
+            <input type="date" name="target_completion_date">
         </div>
 
         <div class="form-group">
             <label>Estimated Budget</label>
 
-            <select name="Estimated Budget">
+            <select name="estimated_budget">
                 <option value="">Select Budget Range</option>
                 <option>Under ₱5,000</option>
                 <option>₱5,000 - ₱10,000</option>
@@ -122,7 +137,7 @@
         <div class="form-group">
             <label>Preferred Contact Method</label>
 
-            <select name="Preferred Contact Method">
+            <select name="preferred_contact_method">
                 <option>Email</option>
                 <option>Phone</option>
                 <option>Viber</option>
@@ -139,7 +154,7 @@
         </div>
 
         <div class="form-group checkbox-group">
-    <input type="checkbox" id="agreement" required>
+    <input type="checkbox" id="agreement" name="agreement" required>
 
     <label for="agreement">
         I confirm that the information provided is accurate and I agree to be contacted regarding this project.
