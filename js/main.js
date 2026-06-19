@@ -2,6 +2,7 @@ const projects = [
     {
         title: "Solar Skid Design",
         category: "Mechanical Design / CAD Drafting",
+        filterCategory: "mechanical cad modeling",
         description: "A mechanical skid concept showing layout, rendering, and technical drawing presentation.",
         images: [
             {
@@ -24,6 +25,7 @@ const projects = [
     {
         title: "3D CAD Modeling Samples",
         category: "3D Modeling / CAD",
+        filterCategory: "cad modeling mechanical",
         description: "Sample 3D CAD modeling, capture, wireframe, and rendering outputs.",
         images: [
             {
@@ -59,9 +61,8 @@ const projects = [
 const portfolioContainer = document.getElementById("portfolioProjects");
 
 if (portfolioContainer) {
-
     portfolioContainer.innerHTML = projects.map(project => `
-        <div class="project-showcase-card">
+        <div class="project-showcase-card" data-category="${project.filterCategory}">
             <div class="project-header">
                 <span>${project.category}</span>
                 <h3>${project.title}</h3>
@@ -72,10 +73,7 @@ if (portfolioContainer) {
                 <h4>Image Gallery</h4>
                 <div class="portfolio-gallery">
                     ${project.images.map(image => `
-                        <a href="${image.file}"
-                           target="_blank"
-                           rel="noopener noreferrer"
-                           class="portfolio-card">
+                        <a href="${image.file}" class="portfolio-card lightbox-trigger">
                             <img src="${image.file}" alt="${image.title}">
                             <h5>${image.title}</h5>
                             <span>View Image</span>
@@ -88,10 +86,7 @@ if (portfolioContainer) {
                 <h4>PDF Documents</h4>
                 <div class="pdf-grid">
                     ${project.pdfs.map(pdf => `
-                        <a href="${pdf.file}"
-                           target="_blank"
-                           rel="noopener noreferrer"
-                           class="pdf-card">
+                        <a href="${pdf.file}" target="_blank" rel="noopener noreferrer" class="pdf-card">
                             <h5>${pdf.title}</h5>
                             <p>Technical document / drawing package.</p>
                             <span>View PDF</span>
@@ -103,12 +98,13 @@ if (portfolioContainer) {
     `).join("");
 }
 
-/* Page Loaded Hook */
+/* PAGE LOADED HOOK */
 
 window.addEventListener("load", () => {
     document.body.classList.add("loaded");
 });
-// ANIMATED STATISTICS COUNTER
+
+/* ANIMATED STATISTICS COUNTER */
 
 const counters = document.querySelectorAll(".counter");
 
@@ -149,7 +145,8 @@ if (counters.length > 0) {
         counterObserver.observe(counter);
     });
 }
-// SCROLL REVEAL ANIMATION
+
+/* SCROLL REVEAL ANIMATION */
 
 const revealElements = document.querySelectorAll(
     ".card, .process-card, .why-card, .skill-card, .pricing-card, .testimonial-card, .stat-card, .case-study-card, .project-showcase-card"
@@ -177,7 +174,8 @@ if (revealElements.length > 0) {
         revealObserver.observe(element);
     });
 }
-// BACK TO TOP BUTTON
+
+/* BACK TO TOP BUTTON */
 
 const backToTopButton = document.getElementById("backToTop");
 
@@ -197,32 +195,30 @@ if (backToTopButton) {
         });
     });
 }
-// SMART NAVBAR
+
+/* SMART NAVBAR */
 
 const navbar = document.getElementById("navbar");
 
 if (navbar) {
     window.addEventListener("scroll", function () {
-
         if (window.scrollY > 100) {
             navbar.classList.add("scrolled");
         } else {
             navbar.classList.remove("scrolled");
         }
-
     });
 }
-// ACTIVE NAVIGATION HIGHLIGHT
+
+/* ACTIVE NAVIGATION HIGHLIGHT */
 
 const sections = document.querySelectorAll("section[id]");
 const navLinks = document.querySelectorAll(".navbar nav a");
 
 window.addEventListener("scroll", function () {
-
     let current = "";
 
     sections.forEach(function (section) {
-
         const sectionTop = section.offsetTop - 140;
         const sectionHeight = section.offsetHeight;
 
@@ -232,19 +228,66 @@ window.addEventListener("scroll", function () {
         ) {
             current = section.getAttribute("id");
         }
-
     });
 
     navLinks.forEach(function (link) {
-
         link.classList.remove("active");
 
-        if (
-            link.getAttribute("href") === "#" + current
-        ) {
+        if (link.getAttribute("href") === "#" + current) {
             link.classList.add("active");
         }
+    });
+});
 
+/* PORTFOLIO FILTER SYSTEM */
+
+const filterButtons = document.querySelectorAll(".filter-btn");
+
+filterButtons.forEach(button => {
+    button.addEventListener("click", () => {
+        filterButtons.forEach(btn => btn.classList.remove("active"));
+        button.classList.add("active");
+
+        const filterValue = button.getAttribute("data-filter");
+
+        document.querySelectorAll(".project-showcase-card").forEach(card => {
+            const categories = card.dataset.category || "";
+
+            if (filterValue === "all" || categories.includes(filterValue)) {
+                card.style.display = "";
+            } else {
+                card.style.display = "none";
+            }
+        });
+    });
+});
+
+/* LIGHTBOX IMAGE VIEWER */
+
+const lightbox = document.getElementById("lightbox");
+const lightboxImage = document.getElementById("lightboxImage");
+const lightboxClose = document.getElementById("lightboxClose");
+
+if (lightbox && lightboxImage && lightboxClose) {
+    document.querySelectorAll(".lightbox-trigger").forEach(link => {
+        link.addEventListener("click", event => {
+            event.preventDefault();
+
+            const image = link.querySelector("img");
+
+            lightbox.classList.add("active");
+            lightboxImage.src = image.src;
+            lightboxImage.alt = image.alt;
+        });
     });
 
-});
+    lightboxClose.addEventListener("click", () => {
+        lightbox.classList.remove("active");
+    });
+
+    lightbox.addEventListener("click", event => {
+        if (event.target === lightbox) {
+            lightbox.classList.remove("active");
+        }
+    });
+}
