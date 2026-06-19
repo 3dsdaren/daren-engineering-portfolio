@@ -108,3 +108,44 @@ if (portfolioContainer) {
 window.addEventListener("load", () => {
     document.body.classList.add("loaded");
 });
+// ANIMATED STATISTICS COUNTER
+
+const counters = document.querySelectorAll(".counter");
+
+if (counters.length > 0) {
+    const counterObserver = new IntersectionObserver(
+        function (entries, observer) {
+            entries.forEach(function (entry) {
+                if (entry.isIntersecting) {
+                    const counter = entry.target;
+                    const target = Number(counter.getAttribute("data-target"));
+                    let count = 0;
+
+                    const speed = 40;
+                    const increment = Math.ceil(target / speed);
+
+                    const updateCounter = function () {
+                        count += increment;
+
+                        if (count >= target) {
+                            counter.textContent = target;
+                        } else {
+                            counter.textContent = count;
+                            requestAnimationFrame(updateCounter);
+                        }
+                    };
+
+                    updateCounter();
+                    observer.unobserve(counter);
+                }
+            });
+        },
+        {
+            threshold: 0.5
+        }
+    );
+
+    counters.forEach(function (counter) {
+        counterObserver.observe(counter);
+    });
+}
