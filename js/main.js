@@ -149,3 +149,31 @@ if (counters.length > 0) {
         counterObserver.observe(counter);
     });
 }
+// SCROLL REVEAL ANIMATION
+
+const revealElements = document.querySelectorAll(
+    ".card, .process-card, .why-card, .skill-card, .pricing-card, .testimonial-card, .stat-card, .case-study-card, .project-showcase-card"
+);
+
+if (revealElements.length > 0) {
+    revealElements.forEach(function (element) {
+        element.classList.add("reveal");
+    });
+
+    const revealObserver = new IntersectionObserver(
+        function (entries) {
+            entries.forEach(function (entry) {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add("active");
+                }
+            });
+        },
+        {
+            threshold: 0.15
+        }
+    );
+
+    revealElements.forEach(function (element) {
+        revealObserver.observe(element);
+    });
+}
