@@ -1,10 +1,13 @@
 const projects = [
     {
-        title: "Solar Skid Design",
-        category: "Mechanical Design / CAD Drafting",
-        filterCategory: "mechanical cad modeling",
-        description: "A mechanical skid concept showing layout, rendering, and technical drawing presentation.",
-        images: [
+    title: "Solar Skid Design",
+    category: "Mechanical Design / CAD Drafting",
+    filterCategory: "mechanical cad modeling",
+    description: "A mechanical skid concept showing layout, rendering, and technical drawing presentation.",
+
+    caseStudy: "solar-skid-case-study.html",
+
+    images: [
             {
                 title: "Skid Rendering",
                 file: "assets/images/portfolio/skid-rendering.jpg"
@@ -94,6 +97,16 @@ if (portfolioContainer) {
                     `).join("")}
                 </div>
             </div>
+                        ${project.caseStudy ? `
+                <div class="project-section-box">
+                    <h4>Full Case Study</h4>
+                    <a href="${project.caseStudy}" class="pdf-card">
+                        <h5>${project.title}</h5>
+                        <p>View the full project story, design process, gallery, and outcome.</p>
+                        <span>View Case Study</span>
+                    </a>
+                </div>
+            ` : ""}
         </div>
     `).join("");
 }

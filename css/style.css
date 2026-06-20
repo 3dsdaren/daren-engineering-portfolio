@@ -1912,3 +1912,242 @@ footer p {
 .tool-card:hover::before {
     left: 120%;
 }
+/* ==============================
+   CASE STUDY PAGE
+============================== */
+
+.case-hero {
+    padding: 150px 20px 90px;
+    text-align: center;
+    background: linear-gradient(180deg, #f8fafc 0%, #ffffff 100%);
+}
+
+.case-hero h1 {
+    font-size: clamp(2.5rem, 6vw, 5rem);
+    margin: 18px 0;
+    color: #0f172a;
+}
+
+.case-hero p {
+    max-width: 760px;
+    margin: 0 auto;
+    color: #475569;
+    font-size: 1.1rem;
+}
+
+.case-hero-buttons {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    margin-top: 35px;
+    flex-wrap: wrap;
+}
+
+.case-section {
+    padding: 85px 20px;
+    background: #ffffff;
+}
+
+.light-section {
+    background: #f8fafc;
+}
+
+.case-section h2 {
+    font-size: clamp(2rem, 4vw, 3rem);
+    margin-bottom: 24px;
+    color: #0f172a;
+}
+
+.case-section p {
+    color: #475569;
+    font-size: 1rem;
+    line-height: 1.8;
+    margin-bottom: 18px;
+}
+
+.case-layout {
+    display: grid;
+    grid-template-columns: 1.4fr 0.8fr;
+    gap: 40px;
+    align-items: start;
+}
+
+.case-info-card,
+.case-card,
+.gallery-card,
+.pdf-download-box {
+    background: #ffffff;
+    border-radius: 22px;
+    padding: 28px;
+    box-shadow: 0 18px 45px rgba(15, 23, 42, 0.08);
+    border: 1px solid rgba(15, 23, 42, 0.06);
+}
+
+.case-info-card h3,
+.case-card h3,
+.gallery-card h3,
+.pdf-download-box h3 {
+    color: #0f172a;
+    margin-bottom: 14px;
+}
+
+.case-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 22px;
+}
+
+.case-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.case-card:hover,
+.gallery-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 25px 60px rgba(15, 23, 42, 0.12);
+}
+
+.timeline {
+    display: grid;
+    gap: 24px;
+    margin-top: 30px;
+}
+
+.timeline-item {
+    display: grid;
+    grid-template-columns: 70px 1fr;
+    gap: 24px;
+    align-items: start;
+    background: #f8fafc;
+    padding: 28px;
+    border-radius: 22px;
+    border: 1px solid rgba(15, 23, 42, 0.06);
+}
+
+.timeline-item span {
+    width: 54px;
+    height: 54px;
+    border-radius: 50%;
+    background: #0f172a;
+    color: #ffffff;
+    display: grid;
+    place-items: center;
+    font-weight: 700;
+}
+
+.timeline-item h3 {
+    color: #0f172a;
+    margin-bottom: 8px;
+}
+
+.case-gallery {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+}
+
+.gallery-card img {
+    width: 100%;
+    border-radius: 18px;
+    margin-bottom: 18px;
+    display: block;
+}
+
+.pdf-download-box {
+    margin-top: 28px;
+    text-align: center;
+}
+
+.skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+}
+
+.skills-list span {
+    padding: 12px 18px;
+    background: #f1f5f9;
+    color: #0f172a;
+    border-radius: 999px;
+    font-weight: 600;
+    border: 1px solid rgba(15, 23, 42, 0.08);
+}
+
+.case-cta {
+    padding: 100px 20px;
+    text-align: center;
+    background: #0f172a;
+    color: #ffffff;
+}
+
+.case-cta h2 {
+    font-size: clamp(2rem, 4vw, 3.4rem);
+    margin-bottom: 18px;
+}
+
+.case-cta p {
+    max-width: 700px;
+    margin: 0 auto 32px;
+    color: #cbd5e1;
+}
+
+footer {
+    text-align: center;
+    padding: 30px 20px;
+    background: #020617;
+    color: #94a3b8;
+}
+
+@media (max-width: 900px) {
+    .case-layout,
+    .case-gallery {
+        grid-template-columns: 1fr;
+    }
+
+    .case-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .case-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .timeline-item {
+        grid-template-columns: 1fr;
+    }
+
+    .case-hero {
+        padding-top: 120px;
+    }
+}
+/* FIX CASE STUDY PAGE LAYOUT */
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.case-section .container,
+.case-hero .container,
+.case-cta .container {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.case-hero {
+    padding-top: 170px;
+}
+
+.case-gallery img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.gallery-card img {
+    max-height: 420px;
+    object-fit: cover;
+}
