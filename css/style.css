@@ -107,17 +107,19 @@ body {
 
 .navbar nav {
     display: flex;
-    gap: 15px;
+    align-items: center;
+    gap: 18px;
+    flex-wrap: nowrap;
 }
 
 .navbar nav a {
     text-decoration: none;
     color: #111827;
     font-weight: 600;
-}
-
-.navbar nav a {
+    font-size: 14px;
+    white-space: nowrap;
     position: relative;
+    transition: color 0.3s ease;
 }
 
 .navbar nav a::after {
@@ -128,18 +130,16 @@ body {
     width: 0;
     height: 2px;
     background: #2563eb;
-    transition: 0.3s ease;
+    transition: width 0.3s ease;
 }
 
-.navbar nav a:hover::after {
+.navbar nav a:hover::after,
+.navbar nav a.active::after {
     width: 100%;
 }
 
-.navbar nav a {
-    transition: color 0.3s ease;
-}
-
-.navbar nav a:hover {
+.navbar nav a:hover,
+.navbar nav a.active {
     color: #2563eb;
 }
 
@@ -177,6 +177,10 @@ body {
     grid-template-columns: 1fr 1fr;
     gap: 60px;
     align-items: center;
+}
+
+.hero-content {
+    max-width: 700px;
 }
 
 .hero-tag {
@@ -355,8 +359,9 @@ body {
 
 .portfolio-card img {
     width: 100%;
-    height: 190px;
+    height: 220px;
     object-fit: cover;
+    object-position: center;
 }
 
 .portfolio-card h5 {
@@ -2150,4 +2155,164 @@ footer {
 .gallery-card img {
     max-height: 420px;
     object-fit: cover;
+}
+/* ================================
+   INDUSTRIAL EXPERIENCE SECTION
+================================ */
+
+.industrial-section {
+    background: #f8fafc;
+}
+
+.industrial-card {
+    max-width: 1300px;
+    margin: 0 auto 36px;
+    background: #ffffff;
+    border-radius: 34px;
+    padding: 46px;
+    border: 1px solid #e5e7eb;
+    box-shadow: 0 24px 70px rgba(0,0,0,0.08);
+    display: grid;
+    grid-template-columns: 1.3fr 0.7fr;
+    gap: 34px;
+    align-items: center;
+}
+
+.industrial-intro h3 {
+    font-size: 32px;
+    color: #111827;
+    margin-bottom: 18px;
+}
+
+.industrial-intro p {
+    color: #6b7280;
+    margin-bottom: 16px;
+    font-size: 17px;
+}
+
+.industrial-flow {
+    background: #111827;
+    color: #ffffff;
+    border-radius: 26px;
+    padding: 28px;
+    text-align: center;
+}
+
+.industrial-flow div {
+    background: rgba(255,255,255,0.08);
+    padding: 14px;
+    border-radius: 16px;
+    font-weight: 700;
+}
+
+.industrial-flow span {
+    display: block;
+    color: #60a5fa;
+    font-size: 22px;
+    margin: 6px 0;
+}
+
+.industrial-grid {
+    max-width: 1300px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 24px;
+}
+
+.industrial-item {
+    background: #ffffff;
+    padding: 32px;
+    border-radius: 28px;
+    border: 1px solid #e5e7eb;
+    box-shadow: 0 16px 45px rgba(0,0,0,0.06);
+    transition: 0.3s ease;
+}
+
+.industrial-item:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 26px 70px rgba(0,0,0,0.12);
+}
+
+.industrial-item h3 {
+    color: #111827;
+    margin-bottom: 12px;
+    font-size: 23px;
+}
+
+.industrial-item p {
+    color: #6b7280;
+}
+
+@media(max-width: 900px) {
+    .industrial-card {
+        grid-template-columns: 1fr;
+        padding: 30px;
+    }
+
+    .industrial-intro h3 {
+        font-size: 26px;
+    }
+}
+.industrial-highlight {
+    margin-top: 20px;
+    padding: 18px;
+    background: #eff6ff;
+    border-left: 4px solid #2563eb;
+    border-radius: 12px;
+    color: #1e293b;
+}
+
+.industrial-summary {
+    max-width: 1200px;
+    margin: 30px auto;
+    text-align: center;
+    padding: 24px;
+    background: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+
+.industrial-summary p {
+    margin: 0;
+    font-size: 18px;
+    color: #475569;
+}
+
+.industrial-project-types {
+    max-width: 1200px;
+    margin: 30px auto;
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+
+.industrial-project-types h3 {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.industrial-project-types ul {
+    columns: 2;
+    gap: 40px;
+}
+
+.industrial-project-types li {
+    margin-bottom: 10px;
+}
+
+@media(max-width: 768px) {
+    .industrial-project-types ul {
+        columns: 1;
+    }
+}
+.project-showcase-card,
+.skill-card,
+.why-card,
+.process-card,
+.pricing-card,
+.testimonial-card,
+.industrial-item {
+    will-change: transform;
 }
