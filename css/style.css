@@ -2316,3 +2316,102 @@ footer {
 .industrial-item {
     will-change: transform;
 }
+.portfolio-filters {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin: 40px auto;
+}
+
+.filter-btn {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 999px;
+    background: #ffffff;
+    color: #111827;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s ease;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+}
+
+.filter-btn.active,
+.filter-btn:hover {
+    background: #2563eb;
+    color: white;
+}
+
+.project-grid {
+    width: min(1200px, 92%);
+    margin: 0 auto 80px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+    gap: 30px;
+}
+
+.project-card {
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    transition: 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-6px);
+}
+
+.project-card img {
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+}
+
+.project-content {
+    padding: 25px;
+}
+
+.project-content span {
+    color: #2563eb;
+    font-weight: 700;
+    font-size: 0.85rem;
+}
+
+.project-content h3 {
+    margin: 12px 0;
+}
+
+.project-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 15px 0;
+}
+
+.project-tags small {
+    background: #eff6ff;
+    color: #2563eb;
+    padding: 6px 10px;
+    border-radius: 999px;
+}
+
+.project-actions {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.project-actions a {
+    text-decoration: none;
+    padding: 10px 16px;
+    border-radius: 999px;
+    background: #111827;
+    color: white;
+    font-weight: 600;
+}
+
+.project-actions a:last-child {
+    background: #e5e7eb;
+    color: #111827;
+}
