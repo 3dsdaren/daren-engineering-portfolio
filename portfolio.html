@@ -28,7 +28,7 @@
 
 </header>
 
-<section class="hero">
+<section class="hero portfolio-hero">
 
     <div class="hero-content">
 
@@ -128,15 +128,20 @@
     <button class="filter-btn" data-filter="consulting">Consulting</button>
 </section>
 
-<section class="project-grid">
+<section class="project-list">
 
-    <article class="project-card" data-category="mechanical cad drawings">
-        <img src="assets/images/portfolio/skid-rendering.jpg" alt="Solar Skid Design">
+    <article class="project-list-item" data-category="mechanical cad drawings">
+        <div class="project-list-image">
+            <img src="assets/images/portfolio/skid-rendering.jpg" alt="Solar Skid Design">
+        </div>
 
-        <div class="project-content">
-            <span>Mechanical Design / CAD Drafting</span>
+        <div class="project-list-content">
+            <span class="project-category">Mechanical Design / CAD Drafting</span>
             <h3>Solar Skid Design</h3>
-            <p>Mechanical skid concept including CAD development, rendering, and technical documentation.</p>
+            <p>
+                Mechanical skid concept including CAD development,
+                rendering, and technical documentation.
+            </p>
 
             <div class="project-tags">
                 <small>CAD Model</small>
@@ -151,13 +156,18 @@
         </div>
     </article>
 
-    <article class="project-card" data-category="cad mechanical">
-        <img src="assets/images/portfolio/3d-cad.jpg" alt="3D CAD Modeling Samples">
+    <article class="project-list-item" data-category="cad mechanical">
+        <div class="project-list-image">
+            <img src="assets/images/portfolio/3d-cad.jpg" alt="3D CAD Modeling Samples">
+        </div>
 
-        <div class="project-content">
-            <span>3D CAD Modeling</span>
+        <div class="project-list-content">
+            <span class="project-category">3D CAD Modeling</span>
             <h3>3D CAD Modeling Samples</h3>
-            <p>Sample CAD modeling work including capture, wireframe, rendering, and assembly views.</p>
+            <p>
+                Sample CAD modeling work including capture,
+                wireframe, rendering, and assembly views.
+            </p>
 
             <div class="project-tags">
                 <small>3D Model</small>
@@ -171,13 +181,18 @@
         </div>
     </article>
 
-    <article class="project-card" data-category="reverse drawings consulting">
-        <img src="assets/images/portfolio/rendering.jpg" alt="Industrial Maintenance Drawing Support">
+    <article class="project-list-item" data-category="reverse drawings consulting">
+        <div class="project-list-image">
+            <img src="assets/images/portfolio/rendering.jpg" alt="Industrial Maintenance Drawing Support">
+        </div>
 
-        <div class="project-content">
-            <span>Reverse Engineering / Workshop Support</span>
+        <div class="project-list-content">
+            <span class="project-category">Reverse Engineering / Workshop Support</span>
             <h3>Industrial Maintenance Drawing Support</h3>
-            <p>Reverse engineering and workshop drawing support for maintenance, fabrication, and machine repair.</p>
+            <p>
+                Reverse engineering and workshop drawing support
+                for maintenance, fabrication, and machine repair.
+            </p>
 
             <div class="project-tags">
                 <small>Reverse Engineering</small>
@@ -195,7 +210,7 @@
 
 <script>
 const filterButtons = document.querySelectorAll(".filter-btn");
-const projectCards = document.querySelectorAll(".project-card");
+const projectCards = document.querySelectorAll(".project-list-item");
 
 filterButtons.forEach(button => {
     button.addEventListener("click", () => {
