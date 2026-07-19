@@ -1,4 +1,4 @@
-const projects = [
+const projects = Object.freeze([
     {
     title: "Solar Skid Design",
     category: "Mechanical Design / CAD Drafting",
@@ -59,7 +59,7 @@ const projects = [
             }
         ]
     }
-];
+]);
 
 const portfolioContainer = document.getElementById("portfolioProjects");
 
@@ -77,7 +77,11 @@ if (portfolioContainer) {
                 <div class="portfolio-gallery">
                     ${project.images.map(image => `
                         <a href="${image.file}" class="portfolio-card lightbox-trigger">
-                            <img src="${image.file}" alt="${image.title}">
+                            <img
+    src="${image.file}"
+    alt="${image.title}"
+    loading="lazy"
+>
                             <h5>${image.title}</h5>
                             <span>View Image</span>
                         </a>
@@ -162,7 +166,17 @@ if (counters.length > 0) {
 /* SCROLL REVEAL ANIMATION */
 
 const revealElements = document.querySelectorAll(
-    ".card, .process-card, .why-card, .skill-card, .pricing-card, .testimonial-card, .stat-card, .case-study-card, .project-showcase-card"
+".card,
+.process-card,
+.why-card,
+.skill-card,
+.pricing-card,
+.testimonial-card,
+.stat-card,
+.case-study-card,
+.project-showcase-card,
+.document-card,
+.project-list-item"
 );
 
 if (revealElements.length > 0) {
@@ -228,79 +242,78 @@ if (navbar) {
 const sections = document.querySelectorAll("section[id]");
 const navLinks = document.querySelectorAll(".navbar nav a");
 
-window.addEventListener("scroll", function () {
-    let current = "";
+if (sections.length > 0 && navLinks.length > 0) {
 
-    sections.forEach(function (section) {
-        const sectionTop = section.offsetTop - 140;
-        const sectionHeight = section.offsetHeight;
+    window.addEventListener("scroll", function () {
 
-        if (
-            window.scrollY >= sectionTop &&
-            window.scrollY < sectionTop + sectionHeight
-        ) {
-            current = section.getAttribute("id");
-        }
+        let current = "";
+
+        sections.forEach(function (section) {
+
+            const sectionTop = section.offsetTop - 140;
+            const sectionHeight = section.offsetHeight;
+
+            if (
+                window.scrollY >= sectionTop &&
+                window.scrollY < sectionTop + sectionHeight
+            ) {
+                current = section.getAttribute("id");
+            }
+
+        });
+
+        navLinks.forEach(function (link) {
+
+            link.classList.remove("active");
+
+            const href = link.getAttribute("href") || "";
+
+            if (
+                href === "#" + current ||
+                href.endsWith("#" + current)
+            ) {
+                link.classList.add("active");
+            }
+
+        });
+
     });
 
-    navLinks.forEach(function (link) {
-        link.classList.remove("active");
-
-        if (link.getAttribute("href") === "#" + current) {
-            link.classList.add("active");
-        }
-    });
-});
+}
 
 /* PORTFOLIO FILTER SYSTEM */
 
 const filterButtons = document.querySelectorAll(".filter-btn");
+const filterableProjects = document.querySelectorAll(
+    ".project-showcase-card, .project-list-item"
+);
 
-filterButtons.forEach(button => {
-    button.addEventListener("click", () => {
-        filterButtons.forEach(btn => btn.classList.remove("active"));
-        button.classList.add("active");
+if (filterButtons.length > 0 && filterableProjects.length > 0) {
+    filterButtons.forEach(function (button) {
+        button.addEventListener("click", function () {
+            filterButtons.forEach(function (filterButton) {
+                filterButton.classList.remove("active");
+            });
 
-        const filterValue = button.getAttribute("data-filter");
+            button.classList.add("active");
 
-        document.querySelectorAll(".project-showcase-card").forEach(card => {
-            const categories = card.dataset.category || "";
+            const filterValue = (
+                button.dataset.filter || "all"
+            ).toLowerCase();
 
-            if (filterValue === "all" || categories.includes(filterValue)) {
-                card.style.display = "";
-            } else {
-                card.style.display = "none";
-            }
+            filterableProjects.forEach(function (project) {
+                const categories = (
+                    project.dataset.category || ""
+                )
+                    .toLowerCase()
+                    .split(/\s+/);
+
+                project.style.display =
+                    filterValue === "all" ||
+                    categories.includes(filterValue)
+                        ? ""
+                        : "none";
+            });
         });
-    });
-});
-
-/* LIGHTBOX IMAGE VIEWER */
-
-const lightbox = document.getElementById("lightbox");
-const lightboxImage = document.getElementById("lightboxImage");
-const lightboxClose = document.getElementById("lightboxClose");
-
-if (lightbox && lightboxImage && lightboxClose) {
-    document.querySelectorAll(".lightbox-trigger").forEach(link => {
-        link.addEventListener("click", event => {
-            event.preventDefault();
-
-            const image = link.querySelector("img");
-
-            lightbox.classList.add("active");
-            lightboxImage.src = image.src;
-            lightboxImage.alt = image.alt;
-        });
-    });
-
-    lightboxClose.addEventListener("click", () => {
-        lightbox.classList.remove("active");
-    });
-
-    lightbox.addEventListener("click", event => {
-        if (event.target === lightbox) {
-            lightbox.classList.remove("active");
-        }
     });
 }

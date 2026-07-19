@@ -10,7 +10,7 @@
 
 <body>
 
-<header class="navbar">
+<header class="navbar" id="navbar">
 
     <div class="logo">
         Daren Engineering Studio
@@ -93,31 +93,197 @@
     </div>
 </section>
 
+<!-- PROFESSIONAL DOCUMENTS -->
+<section class="professional-documents" id="documents">
+    <div class="section-heading">
+        <span class="section-label">PROFESSIONAL RESOURCES</span>
+        <h2>Professional Documents</h2>
+        <p>
+            View selected engineering documents, project presentations,
+            drawing samples, and professional information.
+        </p>
+    </div>
+
+    <div class="document-grid">
+
+        <!-- ENGINEERING PORTFOLIO -->
+        <article class="document-card">
+            <div class="document-icon">📘</div>
+
+            <div class="document-content">
+                <span class="document-type">Engineering Portfolio</span>
+                <h3>Daren Engineering Portfolio</h3>
+
+                <p>
+                    A curated presentation of mechanical design, CAD modelling,
+                    fabrication drawings, industrial projects, and engineering
+                    documentation.
+                </p>
+
+                <div class="document-meta">
+                    <span>PDF Document</span>
+                    <span>Selected Projects</span>
+                </div>
+
+                <div class="document-actions">
+                    <a
+                        href="assets/files/portfolio/Daren-Sombilon-Engineering-Portfolio.pdf"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="btn-primary"
+                    >
+                        View Portfolio
+                    </a>
+
+                    <a
+                        href="assets/files/portfolio/Daren-Sombilon-Engineering-Portfolio.pdf"
+                        download
+                        class="btn-secondary"
+                    >
+                        Download PDF
+                    </a>
+                </div>
+            </div>
+        </article>
+
+        <!-- CAPABILITY STATEMENT -->
+        <article class="document-card">
+            <div class="document-icon">📄</div>
+
+            <div class="document-content">
+                <span class="document-type">Company Profile</span>
+                <h3>Capability Statement</h3>
+
+                <p>
+                    An overview of engineering services, software capability,
+                    industries supported, technical deliverables, and working process.
+                </p>
+
+                <div class="document-meta">
+                    <span>PDF Document</span>
+                    <span>Coming Soon</span>
+                </div>
+
+                <div class="document-actions">
+                    <span class="btn-disabled">In Preparation</span>
+                </div>
+            </div>
+        </article>
+
+        <!-- RESUME -->
+        <article class="document-card">
+            <div class="document-icon">📑</div>
+
+            <div class="document-content">
+                <span class="document-type">Professional Profile</span>
+                <h3>Professional Resume</h3>
+
+                <p>
+                    Professional experience in mechanical drafting, CAD design,
+                    industrial support, fabrication documentation, and production drawing.
+                </p>
+
+                <div class="document-meta">
+                    <span>PDF Document</span>
+                    <span>Career Summary</span>
+                </div>
+
+                <div class="document-actions">
+                    <a
+                        href="assets/files/resume/Daren-Sombilon-Resume.pdf"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="btn-primary"
+                    >
+                        View Resume
+                    </a>
+
+                    <a
+                        href="assets/files/resume/Daren-Sombilon-Resume.pdf"
+                        download
+                        class="btn-secondary"
+                    >
+                        Download
+                    </a>
+                </div>
+            </div>
+        </article>
+
+        <!-- DRAWING SAMPLES -->
+        <article class="document-card">
+            <div class="document-icon">📚</div>
+
+            <div class="document-content">
+                <span class="document-type">Technical Samples</span>
+                <h3>Engineering Drawing Samples</h3>
+
+                <p>
+                    Selected examples of general arrangement drawings,
+                    fabrication details, CAD models, assemblies, and documentation.
+                </p>
+
+                <div class="document-meta">
+                    <span>PDF Package</span>
+                    <span>Drawing Samples</span>
+                </div>
+
+                <div class="document-actions">
+                    <a
+                        href="assets/files/drawings/Daren-Sombilon-Drawing-Samples.pdf"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="btn-primary"
+                    >
+                        View Samples
+                    </a>
+
+                    <a
+                        href="assets/files/drawings/Daren-Sombilon-Drawing-Samples.pdf"
+                        download
+                        class="btn-secondary"
+                    >
+                        Download
+                    </a>
+                </div>
+            </div>
+        </article>
+
+    </div>
+</section>
+
 <section class="stats-section section">
     <div class="stats-grid">
+
         <div class="stat-card">
-            <h3>25+</h3>
+            <h3>
+                <span class="counter" data-target="25">0</span>+
+            </h3>
             <p>Projects Supported</p>
         </div>
 
         <div class="stat-card">
-            <h3>150+</h3>
+            <h3>
+                <span class="counter" data-target="150">0</span>+
+            </h3>
             <p>Engineering Drawings</p>
         </div>
 
         <div class="stat-card">
-            <h3>5+</h3>
+            <h3>
+                <span class="counter" data-target="5">0</span>+
+            </h3>
             <p>CAD Platforms</p>
         </div>
 
         <div class="stat-card">
-            <h3>100%</h3>
+            <h3>
+                <span class="counter" data-target="100">0</span>%
+            </h3>
             <p>Client Focused</p>
         </div>
+
     </div>
 </section>
-
-    
 
 <section class="portfolio-filters">
     <button class="filter-btn active" data-filter="all">All</button>
@@ -201,36 +367,14 @@
             </div>
 
             <div class="project-actions">
-                <a href="#">View Project</a>
+                <span class="btn-disabled">Case Study Coming Soon</span>
             </div>
         </div>
     </article>
 
 </section>
 
-<script>
-const filterButtons = document.querySelectorAll(".filter-btn");
-const projectCards = document.querySelectorAll(".project-list-item");
-
-filterButtons.forEach(button => {
-    button.addEventListener("click", () => {
-        filterButtons.forEach(btn => btn.classList.remove("active"));
-        button.classList.add("active");
-
-        const filter = button.getAttribute("data-filter");
-
-        projectCards.forEach(card => {
-            const category = card.getAttribute("data-category");
-
-            if (filter === "all" || category.includes(filter)) {
-                card.style.display = "block";
-            } else {
-                card.style.display = "none";
-            }
-        });
-    });
-});
-</script>
+<script src="js/main.js"></script>
 
 </body>
 </html>
