@@ -6716,3 +6716,881 @@ textarea:focus-visible {
     }
 }
 
+/* =========================================================
+   V10 — MOBILE RESPONSIVE + CONTACT CTA VISIBILITY
+========================================================= */
+.contact-footer-band .contact-actions .btn-secondary,
+.contact-section .contact-actions .btn-secondary {
+  color:#fff !important;
+  -webkit-text-fill-color:#fff !important;
+  opacity:1 !important;
+  visibility:visible !important;
+  border:1.5px solid rgba(255,255,255,.86) !important;
+  background:rgba(255,255,255,.11) !important;
+}
+.contact-footer-band .contact-actions .btn-secondary:hover,
+.contact-section .contact-actions .btn-secondary:hover {
+  color:#fff !important;
+  background:rgba(37,99,235,.38) !important;
+  border-color:#bfdbfe !important;
+}
+html,body{max-width:100%;overflow-x:hidden}
+img,video,svg{max-width:100%;height:auto}
+.document-grid,.home-documents-grid,.case-study-grid,.footer-grid,
+.document-card,.home-document-card,.document-content,.case-study-card{min-width:0}
+
+@media(max-width:900px){
+  .document-grid,.home-documents-grid{
+    grid-template-columns:repeat(2,minmax(0,1fr)) !important;
+    gap:18px !important;
+  }
+  .professional-documents,.home-documents-section{
+    padding-left:24px !important;padding-right:24px !important;
+  }
+  .document-card,.home-document-card{height:auto !important;min-height:0 !important}
+  .document-actions,.home-document-actions,.portfolio-file-actions{flex-wrap:wrap !important}
+}
+
+@media(max-width:680px){
+  .document-grid,.home-documents-grid{
+    grid-template-columns:minmax(0,1fr) !important;
+    gap:16px !important;
+  }
+  .professional-documents,.home-documents-section{
+    width:100% !important;padding:56px 16px !important;
+  }
+  .document-card,.home-document-card{
+    width:100% !important;max-width:none !important;
+    height:auto !important;min-height:0 !important;
+    padding:22px !important;border-radius:20px !important;
+  }
+  .document-content h3,.home-document-card h3{
+    font-size:clamp(20px,6vw,25px) !important;
+    line-height:1.2 !important;letter-spacing:-.025em !important;
+  }
+  .document-content>p,.home-document-card>p{
+    font-size:14px !important;line-height:1.65 !important;
+  }
+  .document-actions,.home-document-actions,.portfolio-file-actions,.document-request-actions{
+    width:100% !important;display:grid !important;
+    grid-template-columns:1fr !important;gap:9px !important;
+  }
+  .document-actions .btn-primary,.document-actions .btn-secondary,
+  .home-document-actions .btn-primary,.home-document-actions .btn-secondary,
+  .portfolio-file-actions .btn-primary,.portfolio-file-actions .btn-secondary,
+  .document-request-actions .btn-primary{
+    width:100% !important;min-height:46px !important;
+    padding:12px 16px !important;white-space:normal !important;text-align:center !important;
+  }
+  .contact-footer-band .contact-section{
+    width:calc(100% - 24px) !important;margin-left:auto !important;margin-right:auto !important;
+    padding:38px 20px !important;
+  }
+  .contact-footer-band .contact-section h2{
+    font-size:clamp(30px,9vw,40px) !important;line-height:1.12 !important;
+  }
+  .contact-footer-band .contact-section p{font-size:14px !important;line-height:1.65 !important}
+  .contact-footer-band .contact-actions,.contact-section .contact-actions{
+    width:100% !important;display:grid !important;grid-template-columns:1fr !important;gap:10px !important;
+  }
+  .contact-footer-band .contact-actions .btn-primary,
+  .contact-footer-band .contact-actions .btn-secondary,
+  .contact-section .contact-actions .btn-primary,
+  .contact-section .contact-actions .btn-secondary{
+    width:100% !important;min-width:0 !important;min-height:48px !important;
+  }
+  .contact-footer-band .contact-actions .btn-primary,
+  .contact-section .contact-actions .btn-primary{
+    color:#0f172a !important;-webkit-text-fill-color:#0f172a !important;
+  }
+  .contact-footer-band .contact-actions .btn-secondary,
+  .contact-section .contact-actions .btn-secondary{
+    color:#fff !important;-webkit-text-fill-color:#fff !important;
+  }
+  .site-footer{padding-left:20px !important;padding-right:20px !important}
+  .footer-grid{grid-template-columns:1fr !important}
+  .footer-brand{grid-column:auto !important}
+}
+@media(max-width:390px){
+  .professional-documents,.home-documents-section{padding-left:12px !important;padding-right:12px !important}
+  .document-card,.home-document-card{padding:19px !important}
+  .contact-footer-band .contact-section{width:calc(100% - 16px) !important;padding-left:17px !important;padding-right:17px !important}
+}
+
+
+/* =========================================================
+   DAREN ENGINEERING STUDIO — V11 FOOTER + SHEET METAL POLISH
+========================================================= */
+
+/* ---------- FOOTER: GIVE LET'S CONNECT MORE ROOM ---------- */
+
+.site-footer .footer-grid {
+    grid-template-columns:
+        minmax(280px, 1.55fr)
+        minmax(120px, .72fr)
+        minmax(150px, .88fr)
+        minmax(155px, .90fr)
+        minmax(220px, 1.18fr);
+    gap: clamp(28px, 3.5vw, 50px);
+}
+
+.footer-contact {
+    min-width: 220px;
+}
+
+.footer-contact-item {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 64px minmax(0, 1fr);
+    align-items: start;
+    gap: 10px;
+}
+
+.footer-contact-label {
+    color: #7dd3fc;
+    font-size: 10.5px;
+    font-weight: 600;
+    letter-spacing: .06em;
+    text-transform: uppercase;
+}
+
+.footer-contact-item p,
+.footer-contact-item a {
+    margin: 0;
+    color: #dbeafe;
+    font-size: 13px;
+    line-height: 1.55;
+}
+
+.footer-email-link {
+    white-space: nowrap;
+}
+
+.footer-email-link:hover {
+    color: #60a5fa;
+}
+
+/* Keep the final column visually balanced with the others */
+.footer-contact h4 {
+    margin-bottom: 18px;
+}
+
+/* ---------- PORTFOLIO: SHEET METAL CARD REFINEMENT ---------- */
+
+.project-list-item[data-category~="sheetmetal"] .project-category {
+    color: #2563eb;
+}
+
+.project-list-item[data-category~="sheetmetal"] .project-tags small:first-child {
+    background: #eff6ff;
+    color: #1d4ed8;
+}
+
+/* ---------- RESPONSIVE FOOTER ---------- */
+
+@media (max-width: 1120px) {
+    .site-footer .footer-grid {
+        grid-template-columns: 1.35fr repeat(2, minmax(150px, 1fr));
+    }
+
+    .footer-contact {
+        min-width: 0;
+    }
+
+    .footer-email-link {
+        white-space: normal;
+        overflow-wrap: anywhere;
+    }
+}
+
+@media (max-width: 760px) {
+    .site-footer .footer-grid {
+        grid-template-columns: 1fr !important;
+        gap: 32px !important;
+    }
+
+    .footer-contact-item {
+        grid-template-columns: 72px minmax(0, 1fr);
+    }
+
+    .footer-contact {
+        width: 100%;
+    }
+}
+
+@media (max-width: 420px) {
+    .footer-contact-item {
+        grid-template-columns: 1fr;
+        gap: 4px;
+    }
+}
+
+
+/* =========================================================
+   DAREN ENGINEERING STUDIO — V12 CTA VISIBILITY + TRUE MOBILE FIT
+   Final override: fixes Request Service text contrast and
+   prevents mobile layouts from requiring pinch/zoom.
+========================================================= */
+
+/* ---------- REQUEST SERVICE: ALWAYS LEGIBLE ---------- */
+
+.contact-footer-band .contact-section .contact-actions a.btn-secondary,
+.contact-section .contact-actions a.btn-secondary {
+    color: #ffffff !important;
+    -webkit-text-fill-color: #ffffff !important;
+    text-decoration: none !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    border: 1.5px solid rgba(255,255,255,.92) !important;
+    background: rgba(255,255,255,.14) !important;
+    box-shadow:
+        inset 0 1px 0 rgba(255,255,255,.10),
+        0 10px 28px rgba(2,6,23,.18) !important;
+}
+
+.contact-footer-band .contact-section .contact-actions a.btn-secondary:visited,
+.contact-section .contact-actions a.btn-secondary:visited {
+    color: #ffffff !important;
+    -webkit-text-fill-color: #ffffff !important;
+}
+
+.contact-footer-band .contact-section .contact-actions a.btn-secondary:hover,
+.contact-footer-band .contact-section .contact-actions a.btn-secondary:focus-visible,
+.contact-section .contact-actions a.btn-secondary:hover,
+.contact-section .contact-actions a.btn-secondary:focus-visible {
+    color: #ffffff !important;
+    -webkit-text-fill-color: #ffffff !important;
+    background: #2563eb !important;
+    border-color: #93c5fd !important;
+}
+
+/* ---------- MOBILE VIEWPORT SAFETY ---------- */
+
+html {
+    width: 100%;
+    min-width: 0;
+    overflow-x: clip;
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+}
+
+body {
+    width: 100%;
+    min-width: 0 !important;
+    max-width: 100%;
+    margin: 0;
+    overflow-x: clip;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+main,
+section,
+header,
+footer,
+nav,
+.container,
+.page-shell,
+.hero-shell,
+.contact-footer-band,
+.site-footer {
+    min-width: 0;
+    max-width: 100%;
+}
+
+/* ---------- TABLET / PHONE ---------- */
+
+@media (max-width: 760px) {
+    .contact-footer-band {
+        padding-top: 34px !important;
+    }
+
+    .contact-footer-band .contact-section,
+    .contact-section {
+        width: calc(100% - 24px) !important;
+        max-width: none !important;
+        min-width: 0 !important;
+        margin: 0 auto 44px !important;
+        padding: 36px 20px !important;
+        border-radius: 22px !important;
+        background-position: center center !important;
+    }
+
+    .contact-footer-band .contact-section h2,
+    .contact-section h2 {
+        width: 100% !important;
+        max-width: 560px !important;
+        margin: 0 auto 16px !important;
+        font-size: clamp(29px, 8.5vw, 39px) !important;
+        line-height: 1.10 !important;
+        letter-spacing: -.035em !important;
+        text-wrap: balance;
+    }
+
+    .contact-footer-band .contact-section p,
+    .contact-section p {
+        width: 100% !important;
+        max-width: 590px !important;
+        margin: 0 auto 25px !important;
+        font-size: 14px !important;
+        line-height: 1.62 !important;
+        text-wrap: pretty;
+    }
+
+    /* Both CTAs remain visible in the first normal page view */
+    .contact-footer-band .contact-actions,
+    .contact-section .contact-actions {
+        width: min(100%, 430px) !important;
+        margin: 0 auto !important;
+        display: grid !important;
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+        gap: 10px !important;
+    }
+
+    .contact-footer-band .contact-actions a,
+    .contact-section .contact-actions a {
+        width: 100% !important;
+        min-width: 0 !important;
+        min-height: 46px !important;
+        padding: 11px 10px !important;
+        display: inline-flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        font-size: 12.5px !important;
+        line-height: 1.15 !important;
+        white-space: normal !important;
+        text-align: center !important;
+    }
+
+    /* Portfolio/Documents must never preserve desktop widths */
+    .portfolio-page,
+    .portfolio-main,
+    .professional-documents,
+    .home-documents-section,
+    .portfolio-section,
+    .projects-section {
+        width: 100% !important;
+        min-width: 0 !important;
+        max-width: 100% !important;
+    }
+
+    .document-grid,
+    .home-documents-grid,
+    .project-grid,
+    .projects-grid,
+    .project-list {
+        width: 100% !important;
+        min-width: 0 !important;
+        grid-template-columns: minmax(0,1fr) !important;
+    }
+
+    .document-card,
+    .home-document-card,
+    .project-list-item,
+    .project-card {
+        width: 100% !important;
+        min-width: 0 !important;
+        max-width: 100% !important;
+        height: auto !important;
+    }
+
+    .project-list-item {
+        grid-template-columns: 1fr !important;
+    }
+
+    .project-list-item img,
+    .project-image {
+        width: 100% !important;
+        max-width: 100% !important;
+        height: auto !important;
+    }
+}
+
+/* ---------- SMALL PHONES ---------- */
+
+@media (max-width: 480px) {
+    .contact-footer-band .contact-section,
+    .contact-section {
+        width: calc(100% - 16px) !important;
+        padding: 30px 16px !important;
+        border-radius: 19px !important;
+    }
+
+    .contact-footer-band .contact-section h2,
+    .contact-section h2 {
+        font-size: clamp(27px, 8.7vw, 35px) !important;
+    }
+
+    /* Stack only on narrow phones: no clipping, no zoom required */
+    .contact-footer-band .contact-actions,
+    .contact-section .contact-actions {
+        width: 100% !important;
+        grid-template-columns: 1fr !important;
+        gap: 9px !important;
+    }
+
+    .contact-footer-band .contact-actions a,
+    .contact-section .contact-actions a {
+        min-height: 47px !important;
+        font-size: 13px !important;
+    }
+
+    .professional-documents,
+    .home-documents-section,
+    .portfolio-section,
+    .projects-section {
+        padding-left: 12px !important;
+        padding-right: 12px !important;
+    }
+}
+
+/* ---------- VERY NARROW DEVICES ---------- */
+
+@media (max-width: 360px) {
+    .contact-footer-band .contact-section,
+    .contact-section {
+        padding-left: 14px !important;
+        padding-right: 14px !important;
+    }
+
+    .contact-footer-band .contact-section h2,
+    .contact-section h2 {
+        font-size: 27px !important;
+    }
+}
+
+
+/* =========================================================
+   DAREN ENGINEERING STUDIO — V13 REQUEST SERVICE CONTRAST
+   Dedicated CTA override placed LAST so earlier generic
+   link/button rules cannot make the label dark.
+========================================================= */
+
+a.request-service-cta,
+a.request-service-cta:link,
+a.request-service-cta:visited,
+a.request-service-cta:hover,
+a.request-service-cta:active,
+a.request-service-cta:focus,
+.contact-section a.request-service-cta,
+.contact-footer-band .contact-section a.request-service-cta {
+    color: #ffffff !important;
+    -webkit-text-fill-color: #ffffff !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    text-decoration: none !important;
+    background: rgba(30, 64, 175, 0.42) !important;
+    border: 1.5px solid rgba(255, 255, 255, 0.94) !important;
+    text-shadow: 0 1px 8px rgba(0, 0, 0, 0.34) !important;
+}
+
+a.request-service-cta span,
+a.request-service-cta:link span,
+a.request-service-cta:visited span,
+a.request-service-cta:hover span,
+a.request-service-cta:active span,
+a.request-service-cta:focus span {
+    color: #ffffff !important;
+    -webkit-text-fill-color: #ffffff !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    font-weight: 600 !important;
+}
+
+a.request-service-cta:hover,
+a.request-service-cta:focus-visible {
+    background: #2563eb !important;
+    border-color: #bfdbfe !important;
+    box-shadow:
+        0 12px 30px rgba(2, 6, 23, 0.28),
+        0 0 22px rgba(59, 130, 246, 0.20) !important;
+}
+
+/* Preserve the same high contrast on mobile/tablet. */
+@media (max-width: 760px) {
+    a.request-service-cta,
+    a.request-service-cta span {
+        color: #ffffff !important;
+        -webkit-text-fill-color: #ffffff !important;
+    }
+}
+
+
+/* =========================================================
+   DAREN ENGINEERING STUDIO — V14 CTA + MOBILE HERO ACTIONS
+   - Request Service matches Contact Me for maximum readability
+   - Hero actions remain unchanged on desktop
+   - All four hero buttons are visible on mobile without pinch/zoom
+========================================================= */
+
+/* ---------- CONTACT CTA: MATCH CONTACT ME ---------- */
+
+.contact-footer-band .contact-section .contact-actions a.request-service-cta,
+.contact-section .contact-actions a.request-service-cta,
+a.request-service-cta,
+a.request-service-cta:link,
+a.request-service-cta:visited,
+a.request-service-cta:hover,
+a.request-service-cta:active,
+a.request-service-cta:focus {
+    background: #ffffff !important;
+    color: #0f172a !important;
+    -webkit-text-fill-color: #0f172a !important;
+    border: 1px solid #ffffff !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    text-decoration: none !important;
+    text-shadow: none !important;
+    box-shadow: 0 12px 28px rgba(2, 6, 23, 0.22) !important;
+}
+
+.contact-footer-band .contact-section .contact-actions a.request-service-cta span,
+.contact-section .contact-actions a.request-service-cta span,
+a.request-service-cta span,
+a.request-service-cta:link span,
+a.request-service-cta:visited span,
+a.request-service-cta:hover span,
+a.request-service-cta:active span,
+a.request-service-cta:focus span {
+    color: #0f172a !important;
+    -webkit-text-fill-color: #0f172a !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    font-weight: 600 !important;
+}
+
+.contact-footer-band .contact-section .contact-actions a.request-service-cta:hover,
+.contact-footer-band .contact-section .contact-actions a.request-service-cta:focus-visible,
+.contact-section .contact-actions a.request-service-cta:hover,
+.contact-section .contact-actions a.request-service-cta:focus-visible {
+    background: #dbeafe !important;
+    color: #0f172a !important;
+    -webkit-text-fill-color: #0f172a !important;
+    border-color: #dbeafe !important;
+}
+
+/* ---------- HERO ACTIONS: DESKTOP STAYS AS-IS ---------- */
+
+/* Tablet: keep a clean, centered wrap */
+@media (max-width: 900px) {
+    .interactive-industrial-hero .hero-actions,
+    .hero .hero-actions {
+        width: min(100%, 620px) !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+        display: grid !important;
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+        gap: 10px !important;
+        overflow: visible !important;
+        padding-bottom: 0 !important;
+    }
+
+    .interactive-industrial-hero .hero-actions .btn-primary,
+    .interactive-industrial-hero .hero-actions .btn-secondary,
+    .hero .hero-actions .btn-primary,
+    .hero .hero-actions .btn-secondary {
+        width: 100% !important;
+        min-width: 0 !important;
+        min-height: 46px !important;
+        padding: 11px 12px !important;
+        white-space: normal !important;
+        text-align: center !important;
+        line-height: 1.2 !important;
+    }
+}
+
+/* Phone: all 4 actions visible in the first viewport width */
+@media (max-width: 680px) {
+    .interactive-industrial-hero .hero-actions,
+    .hero .hero-actions {
+        width: 100% !important;
+        max-width: 100% !important;
+        display: grid !important;
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+        gap: 9px !important;
+        overflow: visible !important;
+        padding: 0 !important;
+        scrollbar-width: none !important;
+    }
+
+    .interactive-industrial-hero .hero-actions::-webkit-scrollbar,
+    .hero .hero-actions::-webkit-scrollbar {
+        display: none !important;
+    }
+
+    .interactive-industrial-hero .hero-actions .btn-primary,
+    .interactive-industrial-hero .hero-actions .btn-secondary,
+    .hero .hero-actions .btn-primary,
+    .hero .hero-actions .btn-secondary {
+        width: 100% !important;
+        min-width: 0 !important;
+        min-height: 46px !important;
+        padding: 11px 8px !important;
+        font-size: 11.5px !important;
+        white-space: normal !important;
+        text-align: center !important;
+    }
+}
+
+/* Very small phones: stack for readability, still no horizontal zoom */
+@media (max-width: 400px) {
+    .interactive-industrial-hero .hero-actions,
+    .hero .hero-actions {
+        grid-template-columns: 1fr !important;
+    }
+
+    .interactive-industrial-hero .hero-actions .btn-primary,
+    .interactive-industrial-hero .hero-actions .btn-secondary,
+    .hero .hero-actions .btn-primary,
+    .hero .hero-actions .btn-secondary {
+        font-size: 12.5px !important;
+    }
+}
+
+
+/* =========================================================
+   V15 — CONTACT CTA FIX
+   Uses dedicated markup so generic .btn-secondary rules
+   cannot override Request Service anymore.
+========================================================= */
+
+.contact-section .contact-actions {
+    display:flex !important;
+    align-items:center !important;
+    justify-content:center !important;
+    flex-wrap:wrap !important;
+    gap:12px !important;
+    margin-top:28px !important;
+}
+
+.contact-section .contact-cta-button,
+.contact-section .contact-cta-button:link,
+.contact-section .contact-cta-button:visited {
+    min-width:142px !important;
+    min-height:46px !important;
+    display:inline-flex !important;
+    align-items:center !important;
+    justify-content:center !important;
+    padding:11px 20px !important;
+    border:1px solid #ffffff !important;
+    border-radius:999px !important;
+    background:#ffffff !important;
+    color:#0f172a !important;
+    -webkit-text-fill-color:#0f172a !important;
+    font-size:13px !important;
+    font-weight:600 !important;
+    line-height:1 !important;
+    text-decoration:none !important;
+    opacity:1 !important;
+    visibility:visible !important;
+    box-shadow:0 12px 28px rgba(2,6,23,.22) !important;
+    transition:transform .24s ease, background-color .24s ease, box-shadow .24s ease !important;
+}
+
+.contact-section .contact-cta-button:hover,
+.contact-section .contact-cta-button:focus-visible,
+.contact-section .contact-cta-button:active {
+    background:#dbeafe !important;
+    border-color:#dbeafe !important;
+    color:#0f172a !important;
+    -webkit-text-fill-color:#0f172a !important;
+    transform:translateY(-2px) !important;
+    box-shadow:0 16px 34px rgba(2,6,23,.28) !important;
+}
+
+/* Mobile: both buttons remain inside viewport with no zoom required */
+@media (max-width:760px) {
+    .contact-section .contact-actions {
+        width:min(100%,430px) !important;
+        margin-left:auto !important;
+        margin-right:auto !important;
+        display:grid !important;
+        grid-template-columns:repeat(2,minmax(0,1fr)) !important;
+        gap:10px !important;
+    }
+
+    .contact-section .contact-cta-button,
+    .contact-section .contact-cta-button:link,
+    .contact-section .contact-cta-button:visited {
+        width:100% !important;
+        min-width:0 !important;
+        padding:11px 10px !important;
+        white-space:normal !important;
+        text-align:center !important;
+    }
+}
+
+@media (max-width:420px) {
+    .contact-section .contact-actions {
+        grid-template-columns:1fr !important;
+    }
+}
+
+
+/* =========================================================
+   DAREN ENGINEERING STUDIO — V16 MOBILE BUTTON FIT
+   Mobile-only button sizing refinements.
+   Desktop/tablet layouts remain unchanged.
+========================================================= */
+
+@media (max-width: 680px) {
+
+    /* Top/navigation CTA: "Let's Discuss Your Project" */
+    .navbar > .btn-primary,
+    .navbar .btn-primary,
+    .nav-cta,
+    .header-cta {
+        min-width: 0 !important;
+        max-width: 100% !important;
+        min-height: 40px !important;
+        padding: 9px 12px !important;
+        font-size: 11px !important;
+        line-height: 1.15 !important;
+        white-space: normal !important;
+        text-align: center !important;
+    }
+
+    /* Portfolio featured-project action buttons */
+    .case-study-actions {
+        width: 100% !important;
+        display: grid !important;
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+        gap: 8px !important;
+        align-items: stretch !important;
+    }
+
+    .case-study-actions .btn-primary,
+    .case-study-actions .btn-secondary {
+        width: 100% !important;
+        min-width: 0 !important;
+        min-height: 42px !important;
+        padding: 9px 8px !important;
+        font-size: 11.5px !important;
+        line-height: 1.15 !important;
+        white-space: normal !important;
+        text-align: center !important;
+        overflow-wrap: anywhere !important;
+    }
+}
+
+@media (max-width: 420px) {
+
+    /* Keep portfolio buttons tidy on narrow phones */
+    .case-study-actions {
+        grid-template-columns: 1fr 1fr !important;
+        gap: 7px !important;
+    }
+
+    .case-study-actions .btn-primary,
+    .case-study-actions .btn-secondary {
+        min-height: 40px !important;
+        padding: 8px 6px !important;
+        font-size: 10.8px !important;
+    }
+
+    /* Make the main navigation CTA compact rather than wrapping too tall */
+    .navbar > .btn-primary,
+    .navbar .btn-primary,
+    .nav-cta,
+    .header-cta {
+        min-height: 38px !important;
+        padding: 8px 10px !important;
+        font-size: 10.5px !important;
+    }
+}
+
+
+/* =========================================================
+   DAREN ENGINEERING STUDIO — V17 MOBILE NAV CTA POLISH
+   Mobile-only refinement for the top "Let's Discuss Your Project" CTA.
+   Desktop remains unchanged.
+========================================================= */
+
+@media (max-width: 680px) {
+
+    /* Center the primary navbar CTA and give it a strong dark-navy treatment */
+    .navbar > .btn-primary,
+    .navbar .btn-primary,
+    .nav-cta,
+    .header-cta {
+        width: fit-content !important;
+        max-width: calc(100% - 28px) !important;
+        min-width: 0 !important;
+        min-height: 44px !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+        padding: 11px 16px !important;
+
+        display: inline-flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+
+        border: 1px solid rgba(255,255,255,.10) !important;
+        border-radius: 999px !important;
+        background: #0f172a !important;
+        color: #ffffff !important;
+        -webkit-text-fill-color: #ffffff !important;
+
+        font-size: 11.5px !important;
+        font-weight: 600 !important;
+        line-height: 1.1 !important;
+        white-space: normal !important;
+        text-align: center !important;
+
+        box-shadow: 0 10px 24px rgba(15,23,42,.18) !important;
+
+        /* Better touch responsiveness */
+        touch-action: manipulation !important;
+        -webkit-tap-highlight-color: transparent !important;
+        user-select: none !important;
+
+        transition:
+            transform 160ms ease,
+            background-color 160ms ease,
+            box-shadow 160ms ease !important;
+    }
+
+    .navbar > .btn-primary:active,
+    .navbar .btn-primary:active,
+    .nav-cta:active,
+    .header-cta:active {
+        transform: scale(.98) !important;
+        background: #111827 !important;
+        box-shadow: 0 6px 16px rgba(15,23,42,.16) !important;
+    }
+
+    .navbar > .btn-primary:focus-visible,
+    .navbar .btn-primary:focus-visible,
+    .nav-cta:focus-visible,
+    .header-cta:focus-visible {
+        outline: 3px solid rgba(96,165,250,.30) !important;
+        outline-offset: 3px !important;
+    }
+}
+
+@media (max-width: 420px) {
+
+    .navbar > .btn-primary,
+    .navbar .btn-primary,
+    .nav-cta,
+    .header-cta {
+        min-height: 42px !important;
+        padding: 10px 14px !important;
+        font-size: 11px !important;
+        max-width: calc(100% - 20px) !important;
+    }
+}
+
+/* Respect reduced motion for a smoother low-power/mobile experience */
+@media (prefers-reduced-motion: reduce) and (max-width: 680px) {
+    .navbar > .btn-primary,
+    .navbar .btn-primary,
+    .nav-cta,
+    .header-cta {
+        transition: none !important;
+    }
+}
